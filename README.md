@@ -1,4 +1,4 @@
-# android_camera_comparison
+# An Android App That is Used to Compare Cameras
 
 A new Flutter project.
 
