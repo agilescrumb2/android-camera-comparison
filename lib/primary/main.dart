@@ -1,4 +1,4 @@
-import 'package:android_camera_comparison/Detail.dart';
+import 'package:android_camera_comparison/secondary/Detail.dart';
 import 'package:flutter/material.dart';
 
 void main() {
