@@ -43,14 +43,14 @@ class _TestIdState extends State<TestId> {
             onPressed: () {
               increment();
             },
-            child: Icon(Icons.add),
+            child: Icon(Icons.money_rounded),
           ),
         ),
         FloatingActionButton(
           onPressed: () {
             decrement();
           },
-          child: Icon(Icons.remove),
+          child: Icon(Icons.currency_bitcoin),
         )
       ],
     );
