@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
     "name": "android_camera_comparison",
     "short_name": "android_camera_comparison",
+=======
+    "name": "project",
+    "short_name": "project",
+>>>>>>> master
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

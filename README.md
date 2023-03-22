@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # An Android App That is Used to Compare Cameras
+=======
+# project
+>>>>>>> master
 
 A new Flutter project.
 
