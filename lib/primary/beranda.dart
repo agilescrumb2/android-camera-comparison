@@ -11,6 +11,23 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: IconButton(
+          icon: Icon(
+              Icons.menu,
+              size: 35,),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+        actions: [
+          IconButton(
+              icon: Icon(Icons.camera_alt_outlined, size: 35),
+              onPressed: (){},
+          ),
+        ],
+      ),
       body: Stack(
         children: [
           Image.asset(
@@ -32,7 +49,13 @@ class _HomePageState extends State<HomePage> {
                     crossAxisCount: 2,
                     children: <Widget>[
                       Card(
-                        color: Colors.deepPurple,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(30.0),
+                            bottomRight: Radius.circular(30.0),
+                          ),
+                        ),
+                        color: Colors.purpleAccent,
                         elevation: 20,
                         margin: const EdgeInsets.all(8),
                         child: InkWell(
@@ -53,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                                   size: 70,
                                   color: Colors.black,
                                 ),
-                                Text('Camera',
+                                Text('Body Only',
                                     style: TextStyle(fontSize: 17.0)),
                               ],
                             ),
@@ -61,6 +84,13 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(30.0),
+                            bottomLeft: Radius.circular(30.0),
+                          ),
+                        ),
+                        color: Colors.yellowAccent,
                         elevation: 20,
                         margin: const EdgeInsets.all(8),
                         child: InkWell(
@@ -83,7 +113,13 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       Card(
-                        color: Colors.blue,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(30.0),
+                            bottomLeft: Radius.circular(30.0),
+                          ),
+                        ),
+                        color: Colors.purple,
                         elevation: 20,
                         margin: const EdgeInsets.all(8),
                         child: InkWell(
@@ -106,7 +142,13 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       Card(
-                        color: Colors.lightBlue,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(30.0),
+                            bottomRight: Radius.circular(30.0),
+                          ),
+                        ),
+                        color: Colors.deepPurpleAccent,
                         elevation: 20,
                         margin: const EdgeInsets.all(8),
                         child: InkWell(
