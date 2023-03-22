@@ -18,12 +18,12 @@ class _HomePageState extends State<HomePage> {
         leading: IconButton(
           icon: Icon(
               Icons.menu,
-              size: 35,),
+              size: 30,),
           onPressed: () => Navigator.of(context).pop(),
         ),
         actions: [
           IconButton(
-              icon: Icon(Icons.camera_alt_outlined, size: 35),
+              icon: Image.asset('assets/img/white.png'),
               onPressed: (){},
           ),
         ],
@@ -42,7 +42,9 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.only(top: kToolbarHeight),
             child: Column(
               children: [
-                Spacer(),
+                SizedBox(height: 60),
+                Image.asset('assets/img/berandakamera.png'),
+                SizedBox(height: 135),
                 Expanded(
                   child: GridView.count(
                     padding: const EdgeInsets.all(25),
