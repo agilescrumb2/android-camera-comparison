@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/informationpage.dart';
+import 'package:android_camera_comparison/secondary/compare_item.dart';
+import 'package:android_camera_comparison/detail_screen.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+  // TextEditingController searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -18,11 +23,23 @@ class _HomePageState extends State<HomePage> {
         leading: IconButton(
           icon: Icon(
               Icons.menu,
-              size: 30,),
+              size: 25,),
           onPressed: () => Navigator.of(context).pop(),
         ),
+        // title: TextField(
+        //   controller: searchController,
+        //   decoration: InputDecoration(
+        //     hintText: 'Search',
+        //     border: InputBorder.none,
+        //   ),
+        // ),
         actions: [
+          // IconButton(
+          //     onPressed: (){},
+          //     icon: Icon(Icons.search),
+          // ),
           IconButton(
+              padding: EdgeInsets.only(right: 20.0),
               icon: Image.asset('assets/img/white.png'),
               onPressed: (){},
           ),
@@ -37,9 +54,20 @@ class _HomePageState extends State<HomePage> {
             height: size.height,
           ),
           Container(
+            child: Text(
+              'Features',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 28.0,
+                color: Colors.white,
+              ),
+            ),
+            padding: EdgeInsets.only(top: 420.0, left: 35.0),
+          ),
+          Container(
             width: size.width,
             height: size.height,
-            padding: const EdgeInsets.only(top: kToolbarHeight),
+            padding: EdgeInsets.only(top: kToolbarHeight),
             child: Column(
               children: [
                 SizedBox(height: 60),
@@ -57,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                             bottomRight: Radius.circular(30.0),
                           ),
                         ),
-                        color: Colors.purpleAccent,
+                        color: Colors.deepPurple,
                         elevation: 20,
                         margin: const EdgeInsets.all(8),
                         child: InkWell(
@@ -88,15 +116,21 @@ class _HomePageState extends State<HomePage> {
                       Card(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(30.0),
-                            bottomLeft: Radius.circular(30.0),
+                            topRight: Radius.circular(40.0),
+                            bottomLeft: Radius.circular(40.0),
                           ),
                         ),
-                        color: Colors.yellowAccent,
+                        color: Colors.deepPurpleAccent,
                         elevation: 20,
                         margin: const EdgeInsets.all(8),
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CompareItem()),
+                            );
+                          },
                           splashColor: Colors.blueAccent,
                           child: Center(
                             child: Column(
@@ -117,11 +151,11 @@ class _HomePageState extends State<HomePage> {
                       Card(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(30.0),
-                            bottomLeft: Radius.circular(30.0),
+                            topRight: Radius.circular(40.0),
+                            bottomLeft: Radius.circular(40.0),
                           ),
                         ),
-                        color: Colors.purple,
+                        color: Colors.blueAccent,
                         elevation: 20,
                         margin: const EdgeInsets.all(8),
                         child: InkWell(
@@ -146,11 +180,11 @@ class _HomePageState extends State<HomePage> {
                       Card(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(30.0),
-                            bottomRight: Radius.circular(30.0),
+                            topLeft: Radius.circular(40.0),
+                            bottomRight: Radius.circular(40.0),
                           ),
                         ),
-                        color: Colors.deepPurpleAccent,
+                        color: Colors.blue,
                         elevation: 20,
                         margin: const EdgeInsets.all(8),
                         child: InkWell(

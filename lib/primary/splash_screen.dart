@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/primary/beranda.dart';
-import 'package:android_camera_comparison/detail_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
