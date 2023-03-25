@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:android_camera_comparison/informationpage.dart';
+import 'package:android_camera_comparison/secondary/informationpage.dart';
 import 'package:android_camera_comparison/secondary/compare_item.dart';
-import 'package:android_camera_comparison/detail_screen.dart';
+import 'package:android_camera_comparison/secondary/detail_screen.dart';
+import 'package:android_camera_comparison/secondary/kategori.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -24,7 +25,7 @@ class _HomePageState extends State<HomePage> {
           icon: Icon(
               Icons.menu,
               size: 25,),
-          onPressed: () => Navigator.of(context).pop(),
+          onPressed: () {},
         ),
         // title: TextField(
         //   controller: searchController,
@@ -62,7 +63,7 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.white,
               ),
             ),
-            padding: EdgeInsets.only(top: 420.0, left: 35.0),
+            padding: EdgeInsets.only(top: 520.0, left: 35.0),
           ),
           Container(
             width: size.width,
@@ -71,8 +72,8 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 SizedBox(height: 60),
-                Image.asset('assets/img/berandakamera.png'),
-                SizedBox(height: 135),
+                Image.asset('assets/img/char1.png', height: 350, width: 350),
+                SizedBox(height: 65),
                 Expanded(
                   child: GridView.count(
                     padding: const EdgeInsets.all(25),
@@ -80,10 +81,7 @@ class _HomePageState extends State<HomePage> {
                     children: <Widget>[
                       Card(
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(30.0),
-                            bottomRight: Radius.circular(30.0),
-                          ),
+                          borderRadius: BorderRadius.circular(35.0),
                         ),
                         color: Colors.deepPurple,
                         elevation: 20,
@@ -115,10 +113,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       Card(
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(40.0),
-                            bottomLeft: Radius.circular(40.0),
-                          ),
+                          borderRadius: BorderRadius.circular(35.0),
                         ),
                         color: Colors.deepPurpleAccent,
                         elevation: 20,
@@ -128,10 +123,10 @@ class _HomePageState extends State<HomePage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => CompareItem()),
+                                  builder: (context) => KategoriCompare()),
                             );
                           },
-                          splashColor: Colors.blueAccent,
+                          splashColor: Colors.deepPurpleAccent,
                           child: Center(
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -150,10 +145,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       Card(
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(40.0),
-                            bottomLeft: Radius.circular(40.0),
-                          ),
+                          borderRadius: BorderRadius.circular(35.0),
                         ),
                         color: Colors.blueAccent,
                         elevation: 20,
@@ -166,7 +158,7 @@ class _HomePageState extends State<HomePage> {
                               mainAxisSize: MainAxisSize.min,
                               children: const <Widget>[
                                 Icon(
-                                  Icons.camera,
+                                  Icons.camera_roll,
                                   size: 70,
                                   color: Colors.black,
                                 ),
@@ -179,10 +171,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       Card(
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(40.0),
-                            bottomRight: Radius.circular(40.0),
-                          ),
+                          borderRadius: BorderRadius.circular(35.0),
                         ),
                         color: Colors.blue,
                         elevation: 20,
@@ -195,7 +184,7 @@ class _HomePageState extends State<HomePage> {
                               mainAxisSize: MainAxisSize.min,
                               children: const <Widget>[
                                 Icon(
-                                  Icons.camera_enhance_outlined,
+                                  Icons.camera,
                                   size: 70,
                                   color: Colors.black,
                                 ),

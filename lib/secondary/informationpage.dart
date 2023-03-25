@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:android_camera_comparison/detail_screen.dart';
+import 'package:android_camera_comparison/secondary/detail_screen.dart';
 
 class InformationPage extends StatelessWidget {
   final List<Map<String, dynamic>> information = [
@@ -56,14 +56,25 @@ class InformationPage extends StatelessWidget {
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(70.0),
           child: Container(
-            color: Colors.deepPurple, // Warna latar belakang
-            child: Center(
-              child: Text(
-                'search?',
-                style: TextStyle(
-                  fontSize: 24.0,
-                  color: Colors.white,
-                ),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: SizedBox(
+              width: 300,
+              child: Row(
+                children: [
+                  Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Search',
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.symmetric(horizontal: 16),
+                        ),
+                    ),
+                  ),
+                  Icon(Icons.search),
+                ],
               ),
             ),
           ),
