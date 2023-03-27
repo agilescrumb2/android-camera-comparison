@@ -45,43 +45,91 @@ class InformationPage extends StatelessWidget {
       'price': '\$200',
       'imageAsset': 'assets/img/luar.jpg'
     },
+    {
+      'image': 'https://picsum.photos/200/300',
+      'name': 'Product 2',
+      'description': 'This is the description for Product 2',
+      'price': '\$200',
+      'imageAsset': 'assets/img/luar.jpg'
+    },
+    {
+      'image': 'https://picsum.photos/200/300',
+      'name': 'Product 2',
+      'description': 'This is the description for Product 2',
+      'price': '\$200',
+      'imageAsset': 'assets/img/luar.jpg'
+    },
+    {
+      'image': 'https://picsum.photos/200/300',
+      'name': 'Product 2',
+      'description': 'This is the description for Product 2',
+      'price': '\$200',
+      'imageAsset': 'assets/img/luar.jpg'
+    },
+    {
+      'image': 'https://picsum.photos/200/300',
+      'name': 'Product 2',
+      'description': 'This is the description for Product 2',
+      'price': '\$200',
+      'imageAsset': 'assets/img/luar.jpg'
+    },
+    {
+      'image': 'https://picsum.photos/200/300',
+      'name': 'Product 2',
+      'description': 'This is the description for Product 2',
+      'price': '\$200',
+      'imageAsset': 'assets/img/luar.jpg'
+    },
+    {
+      'image': 'https://picsum.photos/200/300',
+      'name': 'Product 2',
+      'description': 'This is the description for Product 2',
+      'price': '\$200',
+      'imageAsset': 'assets/img/luar.jpg'
+    },
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Information'),
+        title: Text('You Can Browse Here'),
         backgroundColor: Colors.deepPurple,
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(70.0),
-          child: Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: SizedBox(
-              width: 300,
-              child: Row(
-                children: [
-                  Expanded(
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Search',
-                          border: InputBorder.none,
-                          contentPadding: EdgeInsets.symmetric(horizontal: 16),
-                        ),
+          preferredSize: Size.fromHeight(50.0),
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 7.0),
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: SizedBox(
+                width: 400,
+                child: Row(
+                  children: [
+                    Expanded(
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Search',
+                            border: InputBorder.none,
+                            contentPadding: EdgeInsets.symmetric(horizontal: 16),
+                          ),
+                      ),
                     ),
-                  ),
-                  Icon(Icons.search),
-                ],
+                    IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.search)
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
         ),
       ),
       body: Container(
-        color: Colors.grey[200], // Ubah warna latar belakang menjadi abu-abu
+        color: Colors.grey[200],
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [

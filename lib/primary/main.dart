@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/primary/splash_screen.dart';
+import 'package:flutter_launcher_icons/main.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+      home: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {

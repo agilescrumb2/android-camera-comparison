@@ -1,3 +1,4 @@
+import 'package:android_camera_comparison/primary/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/secondary/informationpage.dart';
 import 'package:android_camera_comparison/secondary/detail_screen.dart';
@@ -31,23 +32,31 @@ class _KategoriCompareState extends State<KategoriCompare> {
           IconButton(
             padding: EdgeInsets.only(right: 20.0),
             icon: Image.asset('assets/img/kamera4.png'),
-            onPressed: (){},
+            onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => SplashScreen()),
+              );
+            },
           ),
         ],
       ),
       body: Stack(
         children: [
           Container(
+            width: size.width,
+            height: size.height,
             child: Text(
-              'Anda dapat melakukan perbandingan kamera dengan memilih salah satu dari kategori di bawah ini.',
+              'Anda dapat melakukan perbandingan dengan memilih salah satu dari kategori di bawah ini.',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 28.0,
+                fontSize: 22.0,
                 color: Colors.black,
               ),
             ),
-            padding: EdgeInsets.only(top: 480.0),
+            padding: EdgeInsets.only(top: 350.0),
           ),
           Container(
             width: size.width,
@@ -56,8 +65,8 @@ class _KategoriCompareState extends State<KategoriCompare> {
             child: Column(
               children: [
                 SizedBox(height: 60),
-                Image.asset('assets/img/char1.png', height: 350, width: 350),
-                SizedBox(height: 300),
+                Image.asset('assets/img/char1.png', height: 200, width: 200),
+                SizedBox(height: 250),
                 Expanded(
                   child: GridView.count(
                     padding: const EdgeInsets.all(25),

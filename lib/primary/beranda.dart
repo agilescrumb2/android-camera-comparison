@@ -3,6 +3,7 @@ import 'package:android_camera_comparison/secondary/informationpage.dart';
 import 'package:android_camera_comparison/secondary/compare_item.dart';
 import 'package:android_camera_comparison/secondary/detail_screen.dart';
 import 'package:android_camera_comparison/secondary/kategori.dart';
+import 'package:android_camera_comparison/primary/splash_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -42,7 +43,13 @@ class _HomePageState extends State<HomePage> {
           IconButton(
               padding: EdgeInsets.only(right: 20.0),
               icon: Image.asset('assets/img/white.png'),
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => SplashScreen()),
+                );
+              },
           ),
         ],
       ),
@@ -55,6 +62,8 @@ class _HomePageState extends State<HomePage> {
             height: size.height,
           ),
           Container(
+            width: size.width,
+            height: size.height,
             child: Text(
               'Features',
               style: TextStyle(
@@ -72,7 +81,7 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 SizedBox(height: 60),
-                Image.asset('assets/img/char1.png', height: 350, width: 350),
+                Image.asset('assets/img/char1.png', height: 200, width: 200),
                 SizedBox(height: 65),
                 Expanded(
                   child: GridView.count(
