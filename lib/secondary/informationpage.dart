@@ -7,85 +7,85 @@ class InformationPage extends StatelessWidget {
       'image': 'https://picsum.photos/200/300',
       'name': 'Product 1',
       'description': 'This is the description for Product 1',
-      'price': '\$100',
-      'imageAsset': 'assets/img/luar.jpg'
+      'price': 'Rp. 100',
+      'imageAsset': 'assets/img/luar.jpg',
     },
     {
       'image': 'https://picsum.photos/200/300',
       'name': 'Product 2',
       'description': 'This is the description for Product 2',
-      'price': '\$200',
-      'imageAsset': 'assets/img/luar.jpg'
+      'price': 'Rp. 200',
+      'imageAsset': 'assets/img/luar.jpg',
     },
     {
       'image': 'https://picsum.photos/200/300',
-      'name': 'Product 2',
-      'description': 'This is the description for Product 2',
-      'price': '\$200',
-      'imageAsset': 'assets/img/luar.jpg'
+      'name': 'Product 3',
+      'description': 'This is the description for Product 3',
+      'price': 'Rp. 200',
+      'imageAsset': 'assets/img/luar.jpg',
     },
     {
       'image': 'https://picsum.photos/200/300',
-      'name': 'Product 2',
-      'description': 'This is the description for Product 2',
-      'price': '\$200',
-      'imageAsset': 'assets/img/luar.jpg'
+      'name': 'Product 4',
+      'description': 'This is the description for Product 4',
+      'price': 'Rp. 200',
+      'imageAsset': 'assets/img/luar.jpg',
     },
     {
       'image': 'https://picsum.photos/200/300',
-      'name': 'Product 2',
-      'description': 'This is the description for Product 2',
-      'price': '\$200',
-      'imageAsset': 'assets/img/luar.jpg'
+      'name': 'Product 5',
+      'description': 'This is the description for Product 5',
+      'price': 'Rp. 200',
+      'imageAsset': 'assets/img/luar.jpg',
     },
     {
       'image': 'https://picsum.photos/200/300',
-      'name': 'Product 2',
-      'description': 'This is the description for Product 2',
-      'price': '\$200',
-      'imageAsset': 'assets/img/luar.jpg'
+      'name': 'Product 6',
+      'description': 'This is the description for Product 6',
+      'price': 'Rp. 200',
+      'imageAsset': 'assets/img/luar.jpg',
     },
     {
       'image': 'https://picsum.photos/200/300',
-      'name': 'Product 2',
-      'description': 'This is the description for Product 2',
-      'price': '\$200',
-      'imageAsset': 'assets/img/luar.jpg'
+      'name': 'Product 7',
+      'description': 'This is the description for Product 7',
+      'price': 'Rp. 200',
+      'imageAsset': 'assets/img/luar.jpg',
     },
     {
       'image': 'https://picsum.photos/200/300',
-      'name': 'Product 2',
-      'description': 'This is the description for Product 2',
-      'price': '\$200',
-      'imageAsset': 'assets/img/luar.jpg'
+      'name': 'Product 8',
+      'description': 'This is the description for Product 8',
+      'price': 'Rp. 200',
+      'imageAsset': 'assets/img/luar.jpg',
     },
     {
       'image': 'https://picsum.photos/200/300',
-      'name': 'Product 2',
-      'description': 'This is the description for Product 2',
-      'price': '\$200',
-      'imageAsset': 'assets/img/luar.jpg'
+      'name': 'Product 9',
+      'description': 'This is the description for Product 9',
+      'price': 'Rp. 200',
+      'imageAsset': 'assets/img/luar.jpg',
     },
     {
       'image': 'https://picsum.photos/200/300',
-      'name': 'Product 2',
-      'description': 'This is the description for Product 2',
-      'price': '\$200',
-      'imageAsset': 'assets/img/luar.jpg'
+      'name': 'Product 10',
+      'description': 'This is the description for Product 10',
+      'price': 'Rp. 200',
+      'imageAsset': 'assets/img/luar.jpg',
     },
     {
       'image': 'https://picsum.photos/200/300',
-      'name': 'Product 2',
-      'description': 'This is the description for Product 2',
-      'price': '\$200',
-      'imageAsset': 'assets/img/luar.jpg'
+      'name': 'Product 11',
+      'description': 'This is the description for Product 11',
+      'price': 'Rp. 200',
+      'imageAsset': 'assets/img/luar.jpg',
     },
     {
       'image': 'https://picsum.photos/200/300',
-      'name': 'Product 2',
-      'description': 'This is the description for Product 2',
-      'price': '\$200',
-      'imageAsset': 'assets/img/luar.jpg'
+      'name': 'Product 12',
+      'description': 'This is the description for Product 12',
+      'price': 'Rp. 200',
+      'imageAsset': 'assets/img/luar.jpg',
     },
   ];
 
@@ -111,15 +111,26 @@ class InformationPage extends StatelessWidget {
                     Expanded(
                         child: TextField(
                           decoration: InputDecoration(
-                            hintText: 'Search',
+                            hintText: 'Cari Barang Yang Ingin Dilihat',
                             border: InputBorder.none,
                             contentPadding: EdgeInsets.symmetric(horizontal: 16),
                           ),
+                          // onChanged: (value) {
+                          //   setState(() {
+                          //     query = value;
+                          //   });
+                          // },
                       ),
                     ),
-                    IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.search)
+                    Padding(
+                      padding: const EdgeInsets.only(right: 4.5),
+                      child: CircleAvatar(
+                        backgroundColor: Colors.deepPurple,
+                        child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.search, color: Colors.white)
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -129,7 +140,7 @@ class InformationPage extends StatelessWidget {
         ),
       ),
       body: Container(
-        color: Colors.grey[200],
+        color: Colors.deepPurpleAccent,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -161,10 +172,8 @@ class InformationPage extends StatelessWidget {
                             height: 120,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(30),
-                                bottomLeft: Radius.circular(30),
-                                topRight: Radius.circular(30),
-                                bottomRight: Radius.circular(30),
+                                topLeft: Radius.circular(15.0),
+                                bottomLeft: Radius.circular(15.0)
                               ),
                               image: DecorationImage(
                                 image: NetworkImage(
@@ -184,7 +193,7 @@ class InformationPage extends StatelessWidget {
                                     information[index]['name'],
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 18,
+                                      fontSize: 24,
                                     ),
                                   ),
                                   SizedBox(height: 8),
@@ -199,7 +208,7 @@ class InformationPage extends StatelessWidget {
                                     information[index]['price'],
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 18,
+                                      fontSize: 21,
                                       color: Colors.green,
                                     ),
                                   ),
