@@ -1,90 +1,77 @@
 import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/secondary/detail_screen.dart';
+import 'package:android_camera_comparison/primary/splash_screen.dart';
 
 class InformationPage extends StatelessWidget {
   final List<Map<String, dynamic>> information = [
     {
-      'image': 'https://picsum.photos/200/300',
-      'name': 'Product 1',
+      'image': 'assets/img/ixus.png',
+      'name': 'IXUS 285 HS',
       'description': 'This is the description for Product 1',
-      'price': 'Rp. 100',
+      'price': 'IDR 2,410,000',
       'imageAsset': 'assets/img/luar.jpg',
     },
     {
-      'image': 'https://picsum.photos/200/300',
-      'name': 'Product 2',
+      'image': 'assets/img/powershot.png',
+      'name': 'PowerShot G7 X Mark II',
       'description': 'This is the description for Product 2',
-      'price': 'Rp. 200',
+      'price': 'IDR 3,475,000',
       'imageAsset': 'assets/img/luar.jpg',
     },
     {
-      'image': 'https://picsum.photos/200/300',
-      'name': 'Product 3',
+      'image': 'assets/img/powershot2.png',
+      'name': 'PowerShot SX70 HS',
       'description': 'This is the description for Product 3',
-      'price': 'Rp. 200',
+      'price': 'IDR 5,119,800',
       'imageAsset': 'assets/img/luar.jpg',
     },
     {
-      'image': 'https://picsum.photos/200/300',
-      'name': 'Product 4',
+      'image': 'assets/img/powershot3.png',
+      'name': 'PowerShot SX740 HS',
       'description': 'This is the description for Product 4',
-      'price': 'Rp. 200',
+      'price': 'IDR 4,297,000',
       'imageAsset': 'assets/img/luar.jpg',
     },
     {
-      'image': 'https://picsum.photos/200/300',
-      'name': 'Product 5',
+      'image': 'assets/img/eos.png',
+      'name': 'EOS R7 (RF-S18-150mm f/3.5-6.3 IS STM)',
       'description': 'This is the description for Product 5',
-      'price': 'Rp. 200',
+      'price': 'IDR 3,769,000',
       'imageAsset': 'assets/img/luar.jpg',
     },
     {
-      'image': 'https://picsum.photos/200/300',
-      'name': 'Product 6',
+      'image': 'assets/img/eos2.png',
+      'name': 'EOS R3',
       'description': 'This is the description for Product 6',
-      'price': 'Rp. 200',
+      'price': 'IDR 2,987,000',
       'imageAsset': 'assets/img/luar.jpg',
     },
     {
-      'image': 'https://picsum.photos/200/300',
-      'name': 'Product 7',
+      'image': 'assets/img/eos3.png',
+      'name': 'EOS R7',
       'description': 'This is the description for Product 7',
-      'price': 'Rp. 200',
+      'price': 'IDR 1,899,00',
       'imageAsset': 'assets/img/luar.jpg',
     },
     {
-      'image': 'https://picsum.photos/200/300',
-      'name': 'Product 8',
+      'image': 'assets/img/eos4.png',
+      'name': 'EOS R50',
       'description': 'This is the description for Product 8',
-      'price': 'Rp. 200',
+      'price': 'IDR 4,633,000',
       'imageAsset': 'assets/img/luar.jpg',
     },
     {
-      'image': 'https://picsum.photos/200/300',
-      'name': 'Product 9',
+      'image': 'assets/img/eos5.png',
+      'name': 'EOS R8',
       'description': 'This is the description for Product 9',
-      'price': 'Rp. 200',
+      'price': 'IDR 2,955,000',
       'imageAsset': 'assets/img/luar.jpg',
     },
     {
-      'image': 'https://picsum.photos/200/300',
-      'name': 'Product 10',
+      'image': 'assets/img/eos6.png',
+      'name': 'EOS R6 Mark II ',
       'description': 'This is the description for Product 10',
-      'price': 'Rp. 200',
-      'imageAsset': 'assets/img/luar.jpg',
-    },
-    {
-      'image': 'https://picsum.photos/200/300',
-      'name': 'Product 11',
-      'description': 'This is the description for Product 11',
-      'price': 'Rp. 200',
-      'imageAsset': 'assets/img/luar.jpg',
-    },
-    {
-      'image': 'https://picsum.photos/200/300',
-      'name': 'Product 12',
-      'description': 'This is the description for Product 12',
-      'price': 'Rp. 200',
+      'price': 'IDR 3,270,000',
       'imageAsset': 'assets/img/luar.jpg',
     },
   ];
@@ -95,6 +82,19 @@ class InformationPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('You Can Browse Here'),
         backgroundColor: Colors.deepPurple,
+        actions: [
+          IconButton(
+            padding: EdgeInsets.only(right: 20.0),
+            icon: Image.asset('assets/img/white.png'),
+            onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => SplashScreen()),
+              );
+            },
+          ),
+        ],
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(50.0),
           child: Padding(
@@ -146,10 +146,11 @@ class InformationPage extends StatelessWidget {
           children: [
             Expanded(
               child: ListView.builder(
+                physics: BouncingScrollPhysics(),
                 itemCount: information.length,
                 itemBuilder: (BuildContext context, int index) {
                   return Card(
-                    margin: const EdgeInsets.all(8),
+                    margin: const EdgeInsets.all(6),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
@@ -168,15 +169,20 @@ class InformationPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            width: 120,
+                            width: 140,
                             height: 120,
                             decoration: BoxDecoration(
+                              // gradient: LinearGradient(
+                              //   begin: Alignment.topLeft,
+                              //   end: Alignment.bottomRight,
+                              //   colors: [Colors.blue, Colors.green],
+                              // ),
                               borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(15.0),
                                 bottomLeft: Radius.circular(15.0)
                               ),
                               image: DecorationImage(
-                                image: NetworkImage(
+                                image: AssetImage(
                                   information[index]['image'],
                                 ),
                                 fit: BoxFit.cover,

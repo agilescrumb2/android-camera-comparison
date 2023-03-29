@@ -122,7 +122,7 @@ class _KategoriCompareState extends State<KategoriCompare> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => CompareItem()),
+                                  builder: (context) => InformationPage()),
                             );
                           },
                           splashColor: Colors.blueAccent,
