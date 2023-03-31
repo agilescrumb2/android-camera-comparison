@@ -1,283 +1,286 @@
+import 'package:android_camera_comparison/primary/beranda.dart';
 import 'package:flutter/material.dart';
+import 'package:android_camera_comparison/primary/splash_screen.dart';
 
 class DetailScreen extends StatelessWidget {
   final dynamic product;
 
-  DetailScreen({Key? key, required this.product}) : super(key: key);
+  const DetailScreen({Key? key, required this.product}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Color colorone = Color.fromRGBO(140, 138, 255, 1);
-    Color colortwo = Color.fromRGBO(114, 91, 238, 1);
-    Color colorthree = Color.fromRGBO(182, 181, 244, 1);
-    Size size = MediaQuery.of(context).size;
+    const Color colorone = Color.fromRGBO(140, 138, 255, 1);
+    const Color colortwo = Color.fromRGBO(114, 91, 238, 1);
+    const Color colorthree = Color.fromRGBO(182, 181, 244, 1);
+    const Color colorfour = Color(0xff7158D2);
+    const Color colorfive = Color(0xff947FEA);
+    const Color colorsix = Color(0xff3A5CD6);
+    const Color colorseven = Color(0xff6786F5);
+    const Color coloreight = Color(0xffA78CFF);
+
     return Scaffold(
-        resizeToAvoidBottomInset: true,
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(90),
-          child: SafeArea(
-            child: Container(
-              padding: EdgeInsets.only(bottom: 20, left: 20, right: 20),
-              child: AppBar(
-                centerTitle: true,
-                title: Text("Detail"),
-                actions: [
-                  Icon(Icons.camera_enhance_outlined),
-                  Padding(padding: EdgeInsets.only(right: 20))
-                ],
-                backgroundColor: colorone,
-                shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(20),
-                      bottomLeft: Radius.circular(20),
-                      topLeft: Radius.circular(40),
-                      topRight: Radius.circular(40),
-                    )
+      extendBodyBehindAppBar: false,
+      appBar: AppBar(
+        title: Text("Detail"),
+        centerTitle: true,
+        leading: BackButton(),
+        elevation: 1,
+        backgroundColor: coloreight,
+        actions: [
+          IconButton(
+            padding: EdgeInsets.only(right: 20.0),
+            icon: Image.asset('assets/img/white.png'),
+            onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => HomePage()),
+              );
+            },
+          ),
+        ],
+      ),
+      body: ListView(
+        children: [
+          Container(
+            padding: EdgeInsets.all(0),
+            height: 350,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(bottomRight: Radius.circular(40), bottomLeft: Radius.circular(40)),
+                color: coloreight
+            ),
+            child: Column(
+              children: [
+                Image.asset(
+                  product['image'],
+                  height: 300,
                 ),
-              ),
+                SizedBox(height: 10),
+                Text(
+                  product['name'],
+                  style: TextStyle(fontSize: 24, color: Colors.white),
+                )
+              ],
             ),
           ),
-        ),
-        backgroundColor: colortwo,
-        body: Container(
-          padding: EdgeInsets.zero,
-          child: Stack(
-            children: [
-              Align(
-                alignment: Alignment(0.0, 2),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(24),
-                  child: Container(
-                    width: 390,
-                    height: 830,
-                    color: colorthree,
-                    child: Column(
-                      // crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          child: Row(
-                            children: [
-                              Padding(padding: EdgeInsets.all(15)),
-                              Container(
-                                height: 20.0,
-                                width: 20.0,
-                                decoration: new BoxDecoration(
-                                  color: Colors.black,
-                                  shape: BoxShape.circle,
-                                ),
-                              ),
-                              Padding(padding: EdgeInsets.all(5)),
-                              Text(
-                                'Spesifikasi',
-                                style: TextStyle(fontSize: 18, color: Colors.white),
-
-                              ),
-                            ],
-                          ),
-                        ),
-                        Text(
-                          product['description'],
-                          style: TextStyle(fontSize: 18, color: Colors.white, height: 3,decoration: TextDecoration.underline),
-                          textAlign: TextAlign.start,
-                        ),
-                        Container(
-                          child: Row(
-                            children: [
-                              Padding(padding: EdgeInsets.all(15)),
-                              Container(
-                                height: 20.0,
-                                width: 20.0,
-                                decoration: new BoxDecoration(
-                                  color: Colors.black,
-                                  shape: BoxShape.circle,
-                                ),
-                              ),
-                              Padding(padding: EdgeInsets.all(5)),
-                              Text(
-                                'Spesifikasi',
-                                style: TextStyle(fontSize: 18, color: Colors.white),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Text(
-                          product['description'],
-                          style: TextStyle(fontSize: 18, color: Colors.white, height: 3,decoration: TextDecoration.underline),
-                          textAlign: TextAlign.start,
-                        ),
-                        SizedBox(height: 10),
-                        Container(
-                          child: Row(
-                            children: [
-                              Padding(padding: EdgeInsets.all(15)),
-                              Container(
-                                height: 20.0,
-                                width: 20.0,
-                                decoration: new BoxDecoration(
-                                  color: Colors.black,
-                                  shape: BoxShape.circle,
-                                ),
-                              ),
-                              Padding(padding: EdgeInsets.all(5)),
-                              Text(
-                                'Spesifikasi',
-                                style: TextStyle(fontSize: 18, color: Colors.white),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Text(
-                          product['description'],
-                          style: TextStyle(fontSize: 18, color: Colors.white, height: 3,decoration: TextDecoration.underline),
-                          textAlign: TextAlign.start,
-                        ),
-                        SizedBox(height: 280),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Align(
-                alignment: Alignment(0.0, -0.7),
-                child: Column(
+          SizedBox(height: 10),
+          Container(
+            padding: EdgeInsets.all(30),
+            height: 900,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(40), topRight: Radius.circular(40)),
+                color: coloreight
+            ),
+            child: Column(
+              children: [
+                Column(
                   children: [
                     Container(
-                      padding: EdgeInsets.all(0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(24),
-                        child: Image.asset(
-                          product['image'],
-                          height: 200,
-                          width: 200,
-                        ),
+                      child: Row(
+                        children: [
+                          Padding(padding: EdgeInsets.all(15)),
+                          Container(
+                            height: 20.0,
+                            width: 20.0,
+                            decoration: new BoxDecoration(
+                              color: colorsix ,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(left: 5, right: 5)),
+                          Text(
+                            'Spesifikasi',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                          ),
+                        ],
                       ),
                     ),
-                    SizedBox(
-                      child: Text(
-                          product['name'],
-                        style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    )
+                    Text(
+                      'fadjfalsdfjadsklfjlaskdjfddddddddddddddddddddddddddddddddddddddddddddddddddddflsk',
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
                   ],
                 ),
-
-              ),
-            ],
-          ),
-        )
+                SizedBox(height: 10),
+                Column(
+                  children: [
+                    Container(
+                      child: Row(
+                        children: [
+                          Padding(padding: EdgeInsets.all(15)),
+                          Container(
+                            height: 20.0,
+                            width: 20.0,
+                            decoration: new BoxDecoration(
+                              color: colorone ,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(left: 5, right: 5)),
+                          Text(
+                            'Spesifikasi',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Text(
+                      'fadjfalsdfjadsklfjlaskdjfddddddddddddddddddddddddddddddddddddddddddddddddddddflsk',
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Column(
+                  children: [
+                    Container(
+                      child: Row(
+                        children: [
+                          Padding(padding: EdgeInsets.all(15)),
+                          Container(
+                            height: 20.0,
+                            width: 20.0,
+                            decoration: new BoxDecoration(
+                              color: colortwo ,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(left: 5, right: 5)),
+                          Text(
+                            'Spesifikasi',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Text(
+                      'fadjfalsdfjadsklfjlaskdjfddddddddddddddddddddddddddddddddddddddddddddddddddddflsk',
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Column(
+                  children: [
+                    Container(
+                      child: Row(
+                        children: [
+                          Padding(padding: EdgeInsets.all(15)),
+                          Container(
+                            height: 20.0,
+                            width: 20.0,
+                            decoration: new BoxDecoration(
+                              color: colorthree ,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(left: 5, right: 5)),
+                          Text(
+                            'Spesifikasi',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Text(
+                      'fadjfalsdfjadsklfjlaskdjfddddddddddddddddddddddddddddddddddddddddddddddddddddflsk',
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Column(
+                  children: [
+                    Container(
+                      child: Row(
+                        children: [
+                          Padding(padding: EdgeInsets.all(15)),
+                          Container(
+                            height: 20.0,
+                            width: 20.0,
+                            decoration: new BoxDecoration(
+                              color: colorfour ,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(left: 5, right: 5)),
+                          Text(
+                            'Spesifikasi',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Text(
+                      'fadjfalsdfjadsklfjlaskdjfddddddddddddddddddddddddddddddddddddddddddddddddddddflsk',
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Column(
+                  children: [
+                    Container(
+                      child: Row(
+                        children: [
+                          Padding(padding: EdgeInsets.all(15)),
+                          Container(
+                            height: 20.0,
+                            width: 20.0,
+                            decoration: new BoxDecoration(
+                              color: colorfive ,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(left: 5, right: 5)),
+                          Text(
+                            'Spesifikasi',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Text(
+                      'fadjfalsdfjadsklfjlaskdjfddddddddddddddddddddddddddddddddddddddddddddddddddddflsk',
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Column(
+                  children: [
+                    Container(
+                      child: Row(
+                        children: [
+                          Padding(padding: EdgeInsets.all(15)),
+                          Container(
+                            height: 20.0,
+                            width: 20.0,
+                            decoration: new BoxDecoration(
+                              color: colorsix ,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(left: 5, right: 5)),
+                          Text(
+                            'Spesifikasi',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Text(
+                      'fadjfalsdfjadsklfjlaskdjfddddddddddddddddddddddddddddddddddddddddddddddddddddflsk',
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
-//   body: Center(
-//       child: Stack(
-//         children: [
-//           Positioned(
-//             top: 0.0,
-//             child: Card(
-//               child: Container(
-//                 height: 100.0,
-//                 width: double.infinity,
-//                 child: Text('Card 1'),
-//                 color: Colors.white,
-//               ),
-//             ),
-//           ),
-//           Positioned(
-//             top: 50.0,
-//             child: Card(
-//               child: Container(
-//                 height: 100.0,
-//                 width: double.infinity,
-//                 child: Text('Card 2'),
-//               ),
-//             ),
-//           ),
-//           Positioned(
-//             top: 100.0,
-//             child: Card(
-//               child: Container(
-//                 height: 100.0,
-//                 width: double.infinity,
-//                 child: Text('Card 3'),
-//               ),
-//             ),
-//           ),
-//         ],
-//       )
-//   ),
-// );
-
-
-
-// return Scaffold(
-//   appBar: AppBar(
-//     title: Text('Detail Product'),
-//     backgroundColor: Colors.deepPurple,
-//   ),
-//       body: Center(
-//         child: Column(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: [
-//             Container(
-//               width: 338,
-//               height: 236,
-//               child: Card(
-//                 shape: const RoundedRectangleBorder(
-//                     borderRadius: BorderRadius.all(Radius.circular(20))
-//                 ),
-//                 child: Column(
-//
-//                   children: [
-//                     Image.asset(
-//                       product['imageAsset'],
-//                       height: 300,
-//                       width: 200,
-//                     ),
-//                     Text(
-//
-//                       product['name'],
-//                       style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),textAlign: TextAlign.right,
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//             ),
-//             Container(
-//               width: 338,
-//               height: 309,
-//               child: Card(
-//                 shape: const RoundedRectangleBorder(
-//                     borderRadius: BorderRadius.all(Radius.circular(20))
-//                 ),
-//                 child: Column(
-//                   children: [
-//
-//                     SizedBox(height: 16),
-//                     Text(
-//                       product['description'],
-//                       style: TextStyle(fontSize: 18),
-//                       textAlign: TextAlign.start,
-//                     ),
-//                     SizedBox(height: 16),
-//                     Text(
-//                       product['price'],
-//                       style: TextStyle(
-//                         fontSize: 24,
-//                         fontWeight: FontWeight.bold,
-//                         color: Colors.green,
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }

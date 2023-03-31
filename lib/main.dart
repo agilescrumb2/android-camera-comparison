@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/primary/splash_screen.dart';
 import 'package:flutter_launcher_icons/main.dart';
-import 'package:awesome_dialog/awesome_dialog.dart';
 
 void main() {
   runApp(MyApp());
