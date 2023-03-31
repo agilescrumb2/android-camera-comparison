@@ -1,3 +1,5 @@
+import 'package:android_camera_comparison/secondary/list_fullkit.dart';
+import 'package:android_camera_comparison/secondary/list_lensa.dart';
 import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/secondary/list_kamera.dart';
 import 'package:android_camera_comparison/secondary/compare_item.dart';
@@ -128,7 +130,13 @@ class _HomePageState extends State<HomePage> {
                         elevation: 20,
                         margin: const EdgeInsets.all(8),
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ListLensa()),
+                            );
+                          },
                           splashColor: Colors.blueAccent,
                           child: Center(
                             child: Column(
@@ -154,7 +162,13 @@ class _HomePageState extends State<HomePage> {
                         elevation: 20,
                         margin: const EdgeInsets.all(8),
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ListFullkit()),
+                            );
+                          },
                           splashColor: Colors.blueAccent,
                           child: Center(
                             child: Column(
