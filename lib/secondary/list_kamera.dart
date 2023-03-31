@@ -81,7 +81,7 @@ class ListKamera extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('You Can Browse Here'),
+        title: Text('Camera List'),
         backgroundColor: Colors.deepPurple,
         actions: [
           IconButton(

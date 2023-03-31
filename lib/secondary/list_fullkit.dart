@@ -6,35 +6,35 @@ import 'package:android_camera_comparison/primary/splash_screen.dart';
 class ListFullkit extends StatelessWidget {
   final List<Map<String, dynamic>> information = [
     {
-      'image': 'assets/img/ixus.png',
+      'image': 'assets/img/eos200d.png',
       'name': 'EOS 200D II (EF-S 18-55mm f/4-5.6 IS STM)',
       'description': 'This is the description for Product 1',
       'price': 'IDR 15,417,900.00',
       'imageAsset': 'assets/img/luar.jpg',
     },
     {
-      'image': 'assets/img/powershot.png',
+      'image': 'assets/img/eos3000d.png',
       'name': 'EOS 3000D Kit (EF S18-55 III)',
       'description': 'This is the description for Product 2',
       'price': 'IDR 6,482,400.00',
       'imageAsset': 'assets/img/luar.jpg',
     },
     {
-      'image': 'assets/img/powershot2.png',
+      'image': 'assets/img/eos5d.png',
       'name': 'EOS 5D Mark IV Kit (EF 24 - 105 IS II USM)',
       'description': 'This is the description for Product 3',
       'price': 'IDR 72,638,400.00',
       'imageAsset': 'assets/img/luar.jpg',
     },
     {
-      'image': 'assets/img/powershot3.png',
+      'image': 'assets/img/eos6d.png',
       'name': 'EOS 6D Mark II Kit (EF24-105mm f/4L IS II USM)',
       'description': 'This is the description for Product 4',
       'price': 'IDR 48,606,900.00',
       'imageAsset': 'assets/img/luar.jpg',
     },
     {
-      'image': 'assets/img/eos.png',
+      'image': 'assets/img/eos1500d.png',
       'name': 'EOS R7 (RF-S18-150mm f/3.5-6.3 IS STM)',
       'description': 'This is the description for Product 5',
       'price': 'IDR 9,601,500.00',
@@ -81,7 +81,7 @@ class ListFullkit extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('You Can Browse Here'),
+        title: Text('Full-Set List'),
         backgroundColor: Colors.deepPurple,
         actions: [
           IconButton(

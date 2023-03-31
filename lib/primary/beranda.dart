@@ -20,6 +20,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Color.fromRGBO(114, 91, 238, 1),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -57,24 +58,35 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Stack(
         children: [
-          Image.asset(
-            'assets/img/berandapolos.png',
-            fit: BoxFit.cover,
-            width: size.width,
-            height: size.height,
+          Opacity(
+            opacity: 0.3,
+            child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/img/homecamera.png'),
+                  fit: BoxFit.none,
+                ),
+              ),
+            ),
           ),
+          // Image.asset(
+          //   'assets/img/berandapolos.png',
+          //   fit: BoxFit.cover,
+          //   width: size.width,
+          //   height: size.height,
+          // ),
           Container(
             width: size.width,
             height: size.height,
             child: Text(
-              'Features',
+              'Our Features',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 28.0,
                 color: Colors.white,
               ),
             ),
-            padding: EdgeInsets.only(top: 520.0, left: 35.0),
+            padding: EdgeInsets.only(top: 370.0, left: 155.0),
           ),
           Container(
             width: size.width,
@@ -83,7 +95,7 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 SizedBox(height: 60),
-                Image.asset('assets/img/char1.png', height: 200, width: 200),
+                Image.asset('assets/img/char2.png', height: 200, width: 200),
                 SizedBox(height: 65),
                 Expanded(
                   child: GridView.count(
@@ -109,12 +121,8 @@ class _HomePageState extends State<HomePage> {
                           child: Center(
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
-                              children: const <Widget>[
-                                Icon(
-                                  Icons.camera_alt,
-                                  size: 70,
-                                  color: Colors.black,
-                                ),
+                              children: <Widget>[
+                                Image.asset('assets/img/1.png', width: 100, height: 100),
                                 Text('Body Only',
                                     style: TextStyle(fontSize: 17.0)),
                               ],
@@ -141,12 +149,8 @@ class _HomePageState extends State<HomePage> {
                           child: Center(
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
-                              children: const <Widget>[
-                                Icon(
-                                  Icons.camera,
-                                  size: 70,
-                                  color: Colors.black,
-                                ),
+                              children: <Widget>[
+                                Image.asset('assets/img/2.png', width: 100, height: 100),
                                 Text('Lensa',
                                     style: TextStyle(fontSize: 17.0)),
                               ],
@@ -173,12 +177,8 @@ class _HomePageState extends State<HomePage> {
                           child: Center(
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
-                              children: const <Widget>[
-                                Icon(
-                                  Icons.camera_roll,
-                                  size: 70,
-                                  color: Colors.black,
-                                ),
+                              children: <Widget>[
+                                Image.asset('assets/img/3.png', width: 100, height: 100),
                                 Text('Full-Set',
                                     style: TextStyle(fontSize: 17.0)),
                               ],
@@ -199,12 +199,8 @@ class _HomePageState extends State<HomePage> {
                           child: Center(
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
-                              children: const <Widget>[
-                                Icon(
-                                  Icons.compare_arrows,
-                                  size: 70,
-                                  color: Colors.black,
-                                ),
+                              children: <Widget>[
+                                Image.asset('assets/img/4.png', width: 100, height: 100),
                                 Text('Compare',
                                     style: TextStyle(fontSize: 17.0)),
                               ],

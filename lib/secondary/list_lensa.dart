@@ -81,7 +81,7 @@ class ListLensa extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('You Can Browse Here'),
+        title: Text('Lens List'),
         backgroundColor: Colors.deepPurple,
         actions: [
           IconButton(
