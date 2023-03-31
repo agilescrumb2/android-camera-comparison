@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:android_camera_comparison/primary/beranda.dart';
 import 'package:android_camera_comparison/secondary/detail_screen.dart';
 import 'package:android_camera_comparison/primary/splash_screen.dart';
 
-class InformationPage extends StatelessWidget {
+class ListLensa extends StatelessWidget {
   final List<Map<String, dynamic>> information = [
     {
       'image': 'assets/img/ixus.png',
@@ -90,7 +91,7 @@ class InformationPage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => SplashScreen()),
+                    builder: (context) => HomePage()),
               );
             },
           ),
@@ -109,17 +110,17 @@ class InformationPage extends StatelessWidget {
                 child: Row(
                   children: [
                     Expanded(
-                        child: TextField(
-                          decoration: InputDecoration(
-                            hintText: 'Cari Barang Yang Ingin Dilihat',
-                            border: InputBorder.none,
-                            contentPadding: EdgeInsets.symmetric(horizontal: 16),
-                          ),
-                          // onChanged: (value) {
-                          //   setState(() {
-                          //     query = value;
-                          //   });
-                          // },
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Cari Barang Yang Ingin Dilihat',
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.symmetric(horizontal: 16),
+                        ),
+                        // onChanged: (value) {
+                        //   setState(() {
+                        //     query = value;
+                        //   });
+                        // },
                       ),
                     ),
                     Padding(
@@ -178,8 +179,8 @@ class InformationPage extends StatelessWidget {
                               //   colors: [Colors.blue, Colors.green],
                               // ),
                               borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(15.0),
-                                bottomLeft: Radius.circular(15.0)
+                                  topLeft: Radius.circular(15.0),
+                                  bottomLeft: Radius.circular(15.0)
                               ),
                               image: DecorationImage(
                                 image: AssetImage(

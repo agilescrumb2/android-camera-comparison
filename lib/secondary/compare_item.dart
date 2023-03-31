@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:android_camera_comparison/secondary/informationpage.dart';
+import 'package:android_camera_comparison/secondary/list_kamera.dart';
 import 'package:android_camera_comparison/secondary/detail_screen.dart';
 
 class CompareItem extends StatefulWidget {
@@ -49,7 +49,7 @@ class _CompareItemState extends State<CompareItem> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => InformationPage()),
+                              builder: (context) => ListKamera()),
                         );
                       },
                       child: Center(
@@ -81,7 +81,7 @@ class _CompareItemState extends State<CompareItem> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => InformationPage()),
+                              builder: (context) => ListKamera()),
                         );
                       },
                       child: Center(

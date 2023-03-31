@@ -1,6 +1,6 @@
 import 'package:android_camera_comparison/primary/splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:android_camera_comparison/secondary/informationpage.dart';
+import 'package:android_camera_comparison/secondary/list_kamera.dart';
 import 'package:android_camera_comparison/secondary/detail_screen.dart';
 import 'package:android_camera_comparison/secondary/compare_item.dart';
 
@@ -87,7 +87,7 @@ class _KategoriCompareState extends State<KategoriCompare> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => InformationPage()),
+                                  builder: (context) => ListKamera()),
                             );
                           },
                           splashColor: Colors.blueAccent,
@@ -122,7 +122,7 @@ class _KategoriCompareState extends State<KategoriCompare> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => InformationPage()),
+                                  builder: (context) => ListKamera()),
                             );
                           },
                           splashColor: Colors.blueAccent,
