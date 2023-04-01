@@ -1,11 +1,11 @@
 import 'package:android_camera_comparison/primary/beranda.dart';
 import 'package:flutter/material.dart';
-import 'package:android_camera_comparison/primary/splash_screen.dart';
 
-class DetailScreen extends StatelessWidget {
+
+class DetailScreenLens extends StatelessWidget {
   final dynamic product;
 
-  const DetailScreen({Key? key, required this.product}) : super(key: key);
+  const DetailScreenLens({Key? key, required this.product}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +19,14 @@ class DetailScreen extends StatelessWidget {
     const Color coloreight = Color(0xffA78CFF);
 
     return Scaffold(
-      extendBodyBehindAppBar: false,
+      extendBodyBehindAppBar: true,
+      backgroundColor: colortwo,
       appBar: AppBar(
         title: Text("Detail"),
         centerTitle: true,
         leading: BackButton(),
-        elevation: 1,
-        backgroundColor: coloreight,
+        elevation: 0,
+        backgroundColor: colortwo,
         actions: [
           IconButton(
             padding: EdgeInsets.only(right: 20.0),
@@ -53,11 +54,12 @@ class DetailScreen extends StatelessWidget {
               children: [
                 Image.asset(
                   product['image'],
-                  height: 300,
+                  height: 270,
                 ),
                 SizedBox(height: 10),
                 Text(
                   product['name'],
+                  textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 24, color: Colors.white),
                 )
               ],
@@ -66,7 +68,7 @@ class DetailScreen extends StatelessWidget {
           SizedBox(height: 10),
           Container(
             padding: EdgeInsets.all(30),
-            height: 900,
+            height: 550,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(40), topRight: Radius.circular(40)),
                 color: coloreight
@@ -75,6 +77,35 @@ class DetailScreen extends StatelessWidget {
               children: [
                 Column(
                   children: [
+                    Column(
+                      children: [
+                        Container(
+                          child: Row(
+                            children: [
+                              Padding(padding: EdgeInsets.all(15)),
+                              Container(
+                                height: 20.0,
+                                width: 20.0,
+                                decoration: new BoxDecoration(
+                                  color: colorsix ,
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
+                              Padding(padding: EdgeInsets.only(left: 5, right: 5)),
+                              Text(
+                                'Harga',
+                                style: TextStyle(fontSize: 18, color: Colors.white),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Text(
+                          product['harga'],
+                          style: TextStyle(fontSize: 18, color: Colors.white),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10),
                     Container(
                       child: Row(
                         children: [
@@ -89,14 +120,14 @@ class DetailScreen extends StatelessWidget {
                           ),
                           Padding(padding: EdgeInsets.only(left: 5, right: 5)),
                           Text(
-                            'Spesifikasi',
+                            'Bobot (g)',
                             style: TextStyle(fontSize: 18, color: Colors.white),
                           ),
                         ],
                       ),
                     ),
                     Text(
-                      'fadjfalsdfjadsklfjlaskdjfddddddddddddddddddddddddddddddddddddddddddddddddddddflsk',
+                      product['bobot'],
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -118,14 +149,14 @@ class DetailScreen extends StatelessWidget {
                           ),
                           Padding(padding: EdgeInsets.only(left: 5, right: 5)),
                           Text(
-                            'Spesifikasi',
+                            'Diameter x Panjang (mm)',
                             style: TextStyle(fontSize: 18, color: Colors.white),
                           ),
                         ],
                       ),
                     ),
                     Text(
-                      'fadjfalsdfjadsklfjlaskdjfddddddddddddddddddddddddddddddddddddddddddddddddddddflsk',
+                      product['diameter'],
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -147,101 +178,14 @@ class DetailScreen extends StatelessWidget {
                           ),
                           Padding(padding: EdgeInsets.only(left: 5, right: 5)),
                           Text(
-                            'Spesifikasi',
+                            'Apeture Minimum',
                             style: TextStyle(fontSize: 18, color: Colors.white),
                           ),
                         ],
                       ),
                     ),
                     Text(
-                      'fadjfalsdfjadsklfjlaskdjfddddddddddddddddddddddddddddddddddddddddddddddddddddflsk',
-                      style: TextStyle(fontSize: 18, color: Colors.white),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 10),
-                Column(
-                  children: [
-                    Container(
-                      child: Row(
-                        children: [
-                          Padding(padding: EdgeInsets.all(15)),
-                          Container(
-                            height: 20.0,
-                            width: 20.0,
-                            decoration: new BoxDecoration(
-                              color: colorthree ,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                          Padding(padding: EdgeInsets.only(left: 5, right: 5)),
-                          Text(
-                            'Spesifikasi',
-                            style: TextStyle(fontSize: 18, color: Colors.white),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Text(
-                      'fadjfalsdfjadsklfjlaskdjfddddddddddddddddddddddddddddddddddddddddddddddddddddflsk',
-                      style: TextStyle(fontSize: 18, color: Colors.white),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 10),
-                Column(
-                  children: [
-                    Container(
-                      child: Row(
-                        children: [
-                          Padding(padding: EdgeInsets.all(15)),
-                          Container(
-                            height: 20.0,
-                            width: 20.0,
-                            decoration: new BoxDecoration(
-                              color: colorfour ,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                          Padding(padding: EdgeInsets.only(left: 5, right: 5)),
-                          Text(
-                            'Spesifikasi',
-                            style: TextStyle(fontSize: 18, color: Colors.white),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Text(
-                      'fadjfalsdfjadsklfjlaskdjfddddddddddddddddddddddddddddddddddddddddddddddddddddflsk',
-                      style: TextStyle(fontSize: 18, color: Colors.white),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 10),
-                Column(
-                  children: [
-                    Container(
-                      child: Row(
-                        children: [
-                          Padding(padding: EdgeInsets.all(15)),
-                          Container(
-                            height: 20.0,
-                            width: 20.0,
-                            decoration: new BoxDecoration(
-                              color: colorfive ,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                          Padding(padding: EdgeInsets.only(left: 5, right: 5)),
-                          Text(
-                            'Spesifikasi',
-                            style: TextStyle(fontSize: 18, color: Colors.white),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Text(
-                      'fadjfalsdfjadsklfjlaskdjfddddddddddddddddddddddddddddddddddddddddddddddddddddflsk',
+                      product['apeture'],
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -263,19 +207,107 @@ class DetailScreen extends StatelessWidget {
                           ),
                           Padding(padding: EdgeInsets.only(left: 5, right: 5)),
                           Text(
-                            'Spesifikasi',
+                            'Ukuran Filter (mm)',
                             style: TextStyle(fontSize: 18, color: Colors.white),
                           ),
                         ],
                       ),
                     ),
                     Text(
-                      'fadjfalsdfjadsklfjlaskdjfddddddddddddddddddddddddddddddddddddddddddddddddddddflsk',
+                      product['filter'],
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
                 ),
                 SizedBox(height: 10),
+                Column(
+                  children: [
+                    Container(
+                      child: Row(
+                        children: [
+                          Padding(padding: EdgeInsets.all(15)),
+                          Container(
+                            height: 20.0,
+                            width: 20.0,
+                            decoration: new BoxDecoration(
+                              color: colorthree ,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(left: 5, right: 5)),
+                          Text(
+                            'Jarak Pemfokusan Terdekat (m, kaki)',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Text(
+                      product['fokus'],
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Column(
+                  children: [
+                    Container(
+                      child: Row(
+                        children: [
+                          Padding(padding: EdgeInsets.all(15)),
+                          Container(
+                            height: 20.0,
+                            width: 20.0,
+                            decoration: new BoxDecoration(
+                              color: colorfour ,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(left: 5, right: 5)),
+                          Text(
+                            'Pembesaran Maks (x)',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Text(
+                      product['zoom'],
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Column(
+                  children: [
+                    Container(
+                      child: Row(
+                        children: [
+                          Padding(padding: EdgeInsets.all(15)),
+                          Container(
+                            height: 20.0,
+                            width: 20.0,
+                            decoration: new BoxDecoration(
+                              color: colorfive ,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(left: 5, right: 5)),
+                          Text(
+                            'Jumlah Bilah Diafragma',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Text(
+                      product['diafragma'],
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+
               ],
             ),
           )

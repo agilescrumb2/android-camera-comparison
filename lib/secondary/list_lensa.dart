@@ -1,44 +1,70 @@
+import 'package:android_camera_comparison/secondary/detail_screen_lens.dart';
 import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/primary/beranda.dart';
-import 'package:android_camera_comparison/secondary/detail_screen.dart';
+import 'package:android_camera_comparison/secondary/detail_screen_fullkit.dart';
 import 'package:android_camera_comparison/primary/splash_screen.dart';
 
 class ListLensa extends StatelessWidget {
   final List<Map<String, dynamic>> information = [
     {
-      'image': 'assets/img/eos200d.png',
-      'name': 'IXUS 285 HS',
-      'description': 'This is the description for Product 1',
-      'price': 'IDR 2,410,000',
-      'imageAsset': 'assets/img/luar.jpg',
+      'name': 'EF-M55-200mm f/4.5-6.3 IS STM',
+      'bobot': '260',
+      'diameter': '60,9 x 865',
+      'apeture': '32',
+      'filter': '52',
+      'fokus': '1,0/3,28',
+      'zoom': '0,21',
+      'diafragma': '7',
+      'harga': 'IDR 7,825,500.00',
+      'image': 'assets/img/lensa1.png'
     },
     {
-      'image': 'assets/img/eos3000d.png',
-      'name': 'PowerShot G7 X Mark II',
-      'description': 'This is the description for Product 2',
-      'price': 'IDR 3,475,000',
-      'imageAsset': 'assets/img/luar.jpg',
+      'name': 'EF50mm f/1.4 USM',
+      'bobot': '290',
+      'diameter': '73.8 x 50.5',
+      'apeture': '22',
+      'filter': '58',
+      'fokus': '0.45/1.5',
+      'zoom': '0.15',
+      'diafragma': '8',
+      'harga': 'IDR 8,380,500.00',
+      'image': 'assets/img/lensa2.png'
     },
     {
-      'image': 'assets/img/eos5d.png',
-      'name': 'PowerShot SX70 HS',
-      'description': 'This is the description for Product 3',
-      'price': 'IDR 5,119,800',
-      'imageAsset': 'assets/img/luar.jpg',
+      'name': 'RF85mm f/2 Macro IS STM',
+      'bobot': '500',
+      'diameter': '78 x 90,5',
+      'apeture': '29',
+      'filter': '67',
+      'fokus': '0,35 / 1,14',
+      'zoom': '0,5',
+      'diafragma': '9',
+      'harga': 'IDR 12,853,800.00',
+      'image': 'assets/img/lensa3.png'
     },
     {
-      'image': 'assets/img/eos6d.png',
-      'name': 'PowerShot SX740 HS',
-      'description': 'This is the description for Product 4',
-      'price': 'IDR 4,297,000',
-      'imageAsset': 'assets/img/luar.jpg',
+      'name': 'EF-M18-150mm f/3.5-6.3 IS STM (Graphite)',
+      'bobot': '300',
+      'diameter': '-',
+      'apeture': '-',
+      'filter': '55',
+      'fokus': '0.25/0.82',
+      'zoom': '0.31',
+      'diafragma': '7',
+      'harga': 'IDR 10,389,600.00',
+      'image': 'assets/img/lensa4.png'
     },
     {
-      'image': 'assets/img/eos1500d.png',
-      'name': 'EOS R7 (RF-S18-150mm f/3.5-6.3 IS STM)',
-      'description': 'This is the description for Product 5',
-      'price': 'IDR 3,769,000',
-      'imageAsset': 'assets/img/luar.jpg',
+      'name': 'EF-M11-22mm f/4-5.6 IS STM',
+      'bobot': '290',
+      'diameter': '73.8 x 50.5',
+      'apeture': '22',
+      'filter': '58',
+      'fokus': '0.45/1.5',
+      'zoom': '0.15',
+      'diafragma': '8',
+      'harga': 'IDR 8,713,500.00',
+      'image': 'assets/img/lensa5.png'
     },
   ];
 
@@ -127,7 +153,7 @@ class ListLensa extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                DetailScreen(product: information[index]),
+                                DetailScreenLens(product: information[index]),
                           ),
                         );
                       },
@@ -169,15 +195,9 @@ class ListLensa extends StatelessWidget {
                                     ),
                                   ),
                                   SizedBox(height: 8),
-                                  Text(
-                                    information[index]['description'],
-                                    style: TextStyle(
-                                      fontSize: 16,
-                                    ),
-                                  ),
                                   SizedBox(height: 8),
                                   Text(
-                                    information[index]['price'],
+                                    information[index]['harga'],
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 21,

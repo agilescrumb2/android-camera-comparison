@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:android_camera_comparison/secondary/list_kamera.dart';
-import 'package:android_camera_comparison/secondary/detail_screen.dart';
+import 'package:android_camera_comparison/secondary/list_body.dart';
+import 'package:android_camera_comparison/secondary/detail_screen_fullkit.dart';
 
 class CompareItem extends StatefulWidget {
   const CompareItem({Key? key}) : super(key: key);
