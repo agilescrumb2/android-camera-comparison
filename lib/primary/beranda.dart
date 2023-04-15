@@ -1,3 +1,4 @@
+import 'package:android_camera_comparison/secondary/detail_compare.dart';
 import 'package:android_camera_comparison/secondary/list_fullkit.dart';
 import 'package:android_camera_comparison/secondary/list_lensa.dart';
 import 'package:flutter/material.dart';
@@ -194,7 +195,13 @@ class _HomePageState extends State<HomePage> {
                         elevation: 20,
                         margin: const EdgeInsets.all(8),
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DetailCompare()),
+                            );
+                          },
                           splashColor: Colors.deepPurpleAccent,
                           child: Center(
                             child: Column(
