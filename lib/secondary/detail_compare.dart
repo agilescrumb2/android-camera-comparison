@@ -53,43 +53,238 @@ class DetailCompare extends StatelessWidget{
                   ],
                 ),
               ),
+              // Container(
+              //   padding: EdgeInsets.only(
+              //     top: 30
+              //   ),
+              //   child: Column(
+              //     children: [
+              //       Row(
+              //         mainAxisAlignment: MainAxisAlignment.start,
+              //         children: [
+              //           Text('data'),
+              //           Text('data'),
+              //         ],
+              //       ),
+              //       Container(
+              //         child: Column(
+              //           children: [
+              //             Row(
+              //               mainAxisAlignment: MainAxisAlignment.center,
+              //               children: [
+              //                 Text('data'),
+              //                 Text('data'),
+              //               ],
+              //             )
+              //           ],
+              //         ),
+              //       ),
+              //       Row(
+              //         mainAxisAlignment: MainAxisAlignment.spaceAround,
+              //         children: [
+              //           Text('data'),
+              //           Text('data'),
+              //         ],
+              //       ),
+              //       Row(
+              //         mainAxisAlignment: MainAxisAlignment.spaceAround,
+              //         children: [
+              //           Text('data'),
+              //           Text('data'),
+              //         ],
+              //       ),
+              //       Row(
+              //         mainAxisAlignment: MainAxisAlignment.spaceAround,
+              //         children: [
+              //           Text('data'),
+              //           Text('data'),
+              //         ],
+              //       ),
+              //     ],
+              //   ),
+              // ),
               Container(
-                padding: EdgeInsets.only(
-                  top: 30
-                ),
+                padding: EdgeInsets.all(30),
                 child: Column(
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text('data'),
-                        Text('data'),
+                        Expanded(
+                          flex: 3,
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    padding: EdgeInsets.only(right: 15),
+                                    height: 20.0,
+                                    width: 20.0,
+                                    decoration: new BoxDecoration(
+                                      color: colortwo ,
+                                      shape: BoxShape.circle,
+                                    ),
+                                  ),
+                                  Text('Judul')
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text('Deskripsi')
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          flex: 3,
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    padding: EdgeInsets.only(right: 15),
+                                    height: 20.0,
+                                    width: 20.0,
+                                    decoration: new BoxDecoration(
+                                      color: colortwo ,
+                                      shape: BoxShape.circle,
+                                    ),
+                                  ),
+                                  Text('Judul')
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text('Deskripsi')
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
                       ],
                     ),
-                    Container(
-                      child: Column(
-
-                      ),
-                    ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text('data'),
-                        Text('data'),
+                        Expanded(
+                          flex: 3,
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    padding: EdgeInsets.only(right: 15),
+                                    height: 20.0,
+                                    width: 20.0,
+                                    decoration: new BoxDecoration(
+                                      color: colortwo ,
+                                      shape: BoxShape.circle,
+                                    ),
+                                  ),
+                                  Text('Judul')
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text('Deskripsi')
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          flex: 3,
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    padding: EdgeInsets.only(right: 15),
+                                    height: 20.0,
+                                    width: 20.0,
+                                    decoration: new BoxDecoration(
+                                      color: colortwo ,
+                                      shape: BoxShape.circle,
+                                    ),
+                                  ),
+                                  Text('Judul')
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text('Deskripsi')
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text('data'),
-                        Text('data'),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text('data'),
-                        Text('data'),
+                        Expanded(
+                          flex: 3,
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    padding: EdgeInsets.only(right: 15),
+                                    height: 20.0,
+                                    width: 20.0,
+                                    decoration: new BoxDecoration(
+                                      color: colortwo ,
+                                      shape: BoxShape.circle,
+                                    ),
+                                  ),
+                                  Text('Judul')
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text('Deskripsi')
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          flex: 3,
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    padding: EdgeInsets.only(right: 15),
+                                    height: 20.0,
+                                    width: 20.0,
+                                    decoration: new BoxDecoration(
+                                      color: colortwo ,
+                                      shape: BoxShape.circle,
+                                    ),
+                                  ),
+                                  Text('Judul')
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text('Deskripsi')
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ],
