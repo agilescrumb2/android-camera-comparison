@@ -4,7 +4,14 @@ import 'package:android_camera_comparison/primary/beranda.dart';
 import 'package:android_camera_comparison/secondary/detail_screen_fullkit.dart';
 import 'package:android_camera_comparison/primary/splash_screen.dart';
 
-class ListLensaCompare extends StatelessWidget {
+import 'detail_compare.dart';
+
+class ListLensaCompare extends StatefulWidget {
+  @override
+  State<ListLensaCompare> createState() => _ListLensaCompareState();
+}
+
+class _ListLensaCompareState extends State<ListLensaCompare> {
   final List<Map<String, dynamic>> information = [
     {
       'name': 'EF-M55-200mm f/4.5-6.3 IS STM',
@@ -16,7 +23,8 @@ class ListLensaCompare extends StatelessWidget {
       'zoom': '0,21',
       'diafragma': '7',
       'harga': 'IDR 7,825,500.00',
-      'image': 'assets/img/lensa1.png'
+      'image': 'assets/img/lensa1.png',
+      'wish' : false
     },
     {
       'name': 'EF50mm f/1.4 USM',
@@ -28,7 +36,9 @@ class ListLensaCompare extends StatelessWidget {
       'zoom': '0.15',
       'diafragma': '8',
       'harga': 'IDR 8,380,500.00',
-      'image': 'assets/img/lensa2.png'
+      'image': 'assets/img/lensa2.png',
+      'wish' : false
+
     },
     {
       'name': 'RF85mm f/2 Macro IS STM',
@@ -40,7 +50,8 @@ class ListLensaCompare extends StatelessWidget {
       'zoom': '0,5',
       'diafragma': '9',
       'harga': 'IDR 12,853,800.00',
-      'image': 'assets/img/lensa3.png'
+      'image': 'assets/img/lensa3.png',
+      'wish' : false
     },
     {
       'name': 'EF-M18-150mm f/3.5-6.3 IS STM (Graphite)',
@@ -52,7 +63,8 @@ class ListLensaCompare extends StatelessWidget {
       'zoom': '0.31',
       'diafragma': '7',
       'harga': 'IDR 10,389,600.00',
-      'image': 'assets/img/lensa4.png'
+      'image': 'assets/img/lensa4.png',
+      'wish' : false
     },
     {
       'name': 'EF-M11-22mm f/4-5.6 IS STM',
@@ -64,9 +76,13 @@ class ListLensaCompare extends StatelessWidget {
       'zoom': '0.15',
       'diafragma': '8',
       'harga': 'IDR 8,713,500.00',
-      'image': 'assets/img/lensa5.png'
+      'image': 'assets/img/lensa5.png',
+      'wish' : false
     },
   ];
+
+  int checkedCount = 0;
+  int maxChecked = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -208,6 +224,48 @@ class ListLensaCompare extends StatelessWidget {
                               ),
                             ),
                           ),
+                          Checkbox(
+                            value: information[index]['wish'],
+                            onChanged: (newValue) {
+                              int checkedCount = 0;
+                              for (var item in information) {
+                                if (item['wish'] == true) {
+                                  checkedCount++;
+                                }
+                              }
+                              if (checkedCount < 2 || newValue == false) {
+                                setState(() {
+                                  information[index]['wish'] = newValue;
+                                });
+                              } else {
+                                showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return AlertDialog(
+                                      icon : Icon(Icons.dangerous_outlined, size: 100),
+                                      iconColor: Colors.deepPurple,
+                                      title: Text('Limit Reached'),
+                                      content: Text("You can only select up to 2 items."),
+                                      actions: [
+                                        TextButton(
+                                          child: Container(
+                                            height: 50,
+                                            width: 100,
+                                            color: Colors.deepPurple,
+                                            padding: EdgeInsets.only(top: 14),
+                                            child: Text('OK', textAlign: TextAlign.center, style: TextStyle(color: Colors.white)),
+                                          ),
+                                          onPressed: () {
+                                            Navigator.of(context).pop();
+                                          },
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
+                              }
+                            },
+                          )
                         ],
                       ),
                     ),
@@ -218,6 +276,26 @@ class ListLensaCompare extends StatelessWidget {
           ],
         ),
       ),
+        bottomNavigationBar: BottomAppBar(
+            child: Container(
+                color: Colors.deepPurple,
+                height: 40,
+                child: GestureDetector(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [Text('Compare', style: TextStyle(color: Colors.white))],
+                  ),
+                  onTap: (){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => DetailCompare())
+                    );
+                  },
+                )
+            )
+        )
+
     );
   }
 }

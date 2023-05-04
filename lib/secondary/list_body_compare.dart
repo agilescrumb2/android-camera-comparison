@@ -126,6 +126,8 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
       ,'wish' : false
     },
   ];
+  int checkedCount = 0;
+  int maxChecked = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -268,12 +270,47 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
                             ),
                           ),
                           Checkbox(
-                              value: information[index]['wish'],
-                              onChanged: (newValue) {
+                            value: information[index]['wish'],
+                            onChanged: (newValue) {
+                              int checkedCount = 0;
+                              for (var item in information) {
+                                if (item['wish'] == true) {
+                                  checkedCount++;
+                                }
+                              }
+                              if (checkedCount < 2 || newValue == false) {
                                 setState(() {
                                   information[index]['wish'] = newValue;
-                            });
-                          })
+                                });
+                              } else {
+                                showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return AlertDialog(
+                                        icon : Icon(Icons.dangerous_outlined, size: 100),
+                                        iconColor: Colors.deepPurple,
+                                        title: Text('Limit Reached'),
+                                      content: Text("You can only select up to 2 items."),
+                                      actions: [
+                                        TextButton(
+                                          child: Container(
+                                            height: 50,
+                                            width: 100,
+                                            color: Colors.deepPurple,
+                                            padding: EdgeInsets.only(top: 14),
+                                            child: Text('OK', textAlign: TextAlign.center, style: TextStyle(color: Colors.white)),
+                                          ),
+                                          onPressed: () {
+                                            Navigator.of(context).pop();
+                                          },
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
+                              }
+                            },
+                          )
                         ],
                       ),
                     ),
@@ -292,7 +329,7 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [Text('Compare', )],
+              children: [Text('Compare', style: TextStyle(color: Colors.white))],
             ),
             onTap: (){
               Navigator.push(
