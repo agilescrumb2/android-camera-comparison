@@ -1,3 +1,4 @@
+import 'package:android_camera_comparison/secondary/detail_compare.dart';
 import 'package:android_camera_comparison/secondary/list_fullkit.dart';
 import 'package:android_camera_comparison/secondary/list_lensa.dart';
 import 'package:flutter/material.dart';
