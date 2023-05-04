@@ -1,6 +1,11 @@
 import 'dart:async';
+import 'package:android_camera_comparison/secondary/list_body.dart';
 import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/primary/beranda.dart';
+import 'package:android_camera_comparison/model/kamera_list.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+import 'package:android_camera_comparison/model/kamera_list.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -11,9 +16,18 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  List<KameraList> listKamera = [];
+  ListKamera listbody = ListKamera();
+
+  fetchCameraData() async {
+    listKamera = await listbody.fetchCameraData();
+    setState(() {});
+  }
+
   @override
   void initState() {
     super.initState();
+    fetchCameraData();
     Timer(const Duration(seconds: 2), () {
       Navigator.of(context)
           .pushReplacement(MaterialPageRoute(builder: (_) => HomePage()));

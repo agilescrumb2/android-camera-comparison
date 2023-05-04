@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.only(right: 20.0),
               icon: Image.asset('assets/img/white.png'),
               onPressed: (){
-                Navigator.push(
+                Navigator.pop(
                   context,
                   MaterialPageRoute(
                       builder: (context) => SplashScreen()),
@@ -194,7 +194,13 @@ class _HomePageState extends State<HomePage> {
                         elevation: 20,
                         margin: const EdgeInsets.all(8),
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => KategoriCompare()),
+                            );
+                          },
                           splashColor: Colors.deepPurpleAccent,
                           child: Center(
                             child: Column(

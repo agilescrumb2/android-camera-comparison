@@ -10,6 +10,31 @@ class CompareItem extends StatefulWidget {
 }
 
 class _CompareItemState extends State<CompareItem> {
+  late String card1ItemName;
+  late String card1ItemImage;
+  late String card2ItemName;
+  late String card2ItemImage;
+
+  // void _onCard1Clicked() async {
+  //   final result = await Navigator.pushNamed(context, '/list');
+  //   if (result != null) {
+  //     setState(() {
+  //       card1ItemName = result['name'];
+  //       card1ItemImage = result['image'];
+  //     });
+  //   }
+  // }
+  //
+  // void _onCard2Clicked() async {
+  //   final result = await Navigator.pushNamed(context, '/list');
+  //   if (result != null) {
+  //     setState(() {
+  //       card2ItemName = result['name'];
+  //       card2ItemImage = result['image'];
+  //     });
+  //   }
+  // }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -42,31 +67,31 @@ class _CompareItemState extends State<CompareItem> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0),
                   ),
-                  child: Container(
-                    height: 400,
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ListKamera()),
-                        );
-                      },
-                      child: Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Icon(Icons.photo_camera, size: 70, color: Colors.black),
-                            Text(
-                              'Tambahkan Kamera',
-                              style: TextStyle(fontSize: 20),
-                            ),
-                            SizedBox(height: 16),
-                          ],
-                        ),
-                      ),
-                    ),
+                  child: ListTile(
+                    title: Text('Card 1'),
+                    subtitle: Text(card1ItemName ?? 'No item selected'),
+                    leading: card1ItemImage != null ? Image.network(card1ItemImage) : null,
+                    // onTap: _onCard1Clicked,
                   ),
+                  // child: Container(
+                  //   height: 400,
+                  //   child: InkWell(
+                  //     onTap: _onCard1Clicked,
+                  //     child: Center(
+                  //       child: Column(
+                  //         mainAxisAlignment: MainAxisAlignment.center,
+                  //         children: <Widget>[
+                  //           Icon(Icons.photo_camera, size: 70, color: Colors.black),
+                  //           Text(
+                  //             'Tambahkan Kamera',
+                  //             style: TextStyle(fontSize: 20),
+                  //           ),
+                  //           SizedBox(height: 16),
+                  //         ],
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                 ),
               ),
               Expanded(
@@ -74,31 +99,31 @@ class _CompareItemState extends State<CompareItem> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0),
                   ),
-                  child: Container(
-                    height: 400,
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ListKamera()),
-                        );
-                      },
-                      child: Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Icon(Icons.photo_camera, size: 70, color: Colors.black),
-                            Text(
-                              'Tambahkan Kamera',
-                              style: TextStyle(fontSize: 20),
-                            ),
-                            SizedBox(height: 16),
-                          ],
-                        ),
-                      ),
-                    ),
+                  child: ListTile(
+                    title: Text('Card 2'),
+                    subtitle: Text(card2ItemName ?? 'No item selected'),
+                    leading: card2ItemImage != null ? Image.network(card2ItemImage) : null,
+                    // onTap: _onCard2Clicked,
                   ),
+                  // child: Container(
+                  //   height: 400,
+                  //   child: InkWell(
+                  //     onTap: _onCard2Clicked,
+                  //     child: Center(
+                  //       child: Column(
+                  //         mainAxisAlignment: MainAxisAlignment.center,
+                  //         children: <Widget>[
+                  //           Icon(Icons.photo_camera, size: 70, color: Colors.black),
+                  //           Text(
+                  //             'Tambahkan Kamera',
+                  //             style: TextStyle(fontSize: 20),
+                  //           ),
+                  //           SizedBox(height: 16),
+                  //         ],
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                 ),
               ),
             ],
