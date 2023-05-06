@@ -6,6 +6,8 @@ import 'package:android_camera_comparison/secondary/list_body.dart';
 import 'package:android_camera_comparison/secondary/detail_screen_fullkit.dart';
 import 'package:android_camera_comparison/secondary/compare_item.dart';
 
+import 'list_fullkit_compare.dart';
+
 class KategoriCompare extends StatefulWidget {
   const KategoriCompare({Key? key}) : super(key: key);
 
@@ -177,7 +179,7 @@ class _KategoriCompareState extends State<KategoriCompare> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ListLensaCompare()),
+                                    builder: (context) => ListFullkitCompare()),
                               );
                             },
                             splashColor: Colors.blueAccent,
