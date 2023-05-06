@@ -32,7 +32,7 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
         rentang_rana: '30 - 1/8000 Bulb',
         bobot: '1440',
         white_balance: 'Auto (Ambience priority), Auto (White priority), Preset (Daylight, Shade, Cloudy, Tungsten light, White fluorescent light, Flash), Custom 1-5, pengaturan suhu Warna (kira-kira 2500-10000 K), koreksi White Balance dan white balance bracketing*2',
-        harga: '133,000,200.00',
+        harga: 'Rp. 133,000,200.00',
         image: 'assets/img/body1.png',
         wish: false
     ),
@@ -55,7 +55,7 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
         rentang_rana: '30 - 1/8000, Bulb',
         bobot: '890',
         white_balance: 'Auto (Ambience priority), Auto (White priority), Preset (Daylight, Shade, Cloudy, Tungsten light, White fluorescent light, Flash), Color temperature setting (approx. 2500-10000 K), Personal white balance',
-        harga: '55,888,500.00',
+        harga: 'Rp. 55,888,500.00',
         image: 'assets/img/body2.png',
         wish: false
     ),
@@ -78,7 +78,7 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
         rentang_rana: 'Stills: Tirai ke-1 Mekanis / Elektronik: 30 - 1/4000 Rana elektronik: 30 - 1/16000 Perekaman movie: Auto exposure (Pencahayaan Otomatis): 1/25* - 1/4000, Manual exposure (Pencahayaan manual): 1/8* - 1/4000  *Bervariasi menurut mode pemotretan dan frame rate',
         bobot: '429',
         white_balance: 'Auto (Ambience priority / White priority), Daylight, Shade, Cloudy (Efektif untuk suasana subuh dan senja hari), Tungsten light, cahaya Neon Putih, Flash*, Custom, tersedia fitur Pengaturan suhu warna (sekitar 2500–10000 K) White balance shift dan white balance bracketing *Memungkinkan untuk melakukan transmisi informasi suhu warna Lampu Kilat (EX / EL Series Speedlite)',
-        harga: 'IDR 20,113,200.00',
+        harga: 'Rp. IDR 20,113,200.00',
         image: 'assets/img/body3.png',
         wish: false
     ),
@@ -101,7 +101,7 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
         rentang_rana: '30 - 1/4000, Bulb',
         bobot: '765',
         white_balance: 'Auto (Ambience priority), Auto (White priority), Preset (Daylight, Shade, Cloudy, Tungsten light, White fluorescent light, Flash), Custom, Color temperature setting (approx. 2500-10000 K), White balance correction and white balance bracketing features provided * Flash color temperature information transmission possible',
-        harga: 'IDR 31,290,900.00',
+        harga: 'Rp. IDR 31,290,900.00',
         image: 'assets/img/body4.png',
         wish: false
     ),
@@ -124,7 +124,7 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
         rentang_rana: '30 - 1/8000, Bulb',
         bobot: '660',
         white_balance: 'Auto (Ambience priority), Auto (White priority), Preset (Daylight, Shade, Cloudy, Tungsten light, White fluorescent light, Flash), Custom, pengaturan suhu Warna (Kira-kira 2500-10000 K), koreksi White balance dan White balance bracketing, tersedia * Memungkinkan Transmisi informasi suhu warna flash (lampu kilat)',
-        harga: 'IDR 30,169,800.00',
+        harga: 'Rp. IDR 30,169,800.00',
         image: 'assets/img/body5.png',
         wish: false
     ),
