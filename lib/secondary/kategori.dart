@@ -186,11 +186,11 @@ class _KategoriCompareState extends State<KategoriCompare> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: const <Widget>[
                                   Icon(
-                                    Icons.camera,
+                                    Icons.camera_enhance,
                                     size: 70,
                                     color: Colors.black,
                                   ),
-                                  Text('Lensa',
+                                  Text('Full Body',
                                       style: TextStyle(fontSize: 17.0)),
                                 ],
                               ),
