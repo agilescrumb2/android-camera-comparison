@@ -8,7 +8,7 @@ project(runner LANGUAGES CXX)
 set(BINARY_NAME "android_camera_comparison")
 # The unique GTK application identifier for this application. See:
 # https://wiki.gnome.org/HowDoI/ChooseApplicationID
-set(APPLICATION_ID "com.example.android_camera_comparison")
+set(APPLICATION_ID "com.b2.cameris")
 =======
 set(BINARY_NAME "project")
 # The unique GTK application identifier for this application. See:
