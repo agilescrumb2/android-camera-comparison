@@ -334,7 +334,7 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
             onTap: (){
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DetailCompare())
+                  MaterialPageRoute(builder: (context) => DetailCompare(selectedItems: [],))
               );
             },
           )

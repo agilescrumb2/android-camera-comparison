@@ -19,15 +19,15 @@ class _SplashScreenState extends State<SplashScreen> {
   List<KameraList> listKamera = [];
   ListKamera listbody = ListKamera();
 
-  fetchCameraData() async {
-    listKamera = await listbody.fetchCameraData();
-    setState(() {});
-  }
+  // fetchCameraData() async {
+  //   listKamera = await listbody.fetchCameraData();
+  //   setState(() {});
+  // }
 
   @override
   void initState() {
     super.initState();
-    fetchCameraData();
+    // fetchCameraData();
     Timer(const Duration(seconds: 2), () {
       Navigator.of(context)
           .pushReplacement(MaterialPageRoute(builder: (_) => HomePage()));

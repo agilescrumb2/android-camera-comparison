@@ -131,7 +131,7 @@ class _DetailCompareState extends State<DetailCompare> {
                                         shape: BoxShape.circle,
                                       ),
                                     ),
-                                    Text(widget.selectedItems[index]['name'])
+                                    // Text(widget.selectedItems[index]['name'])
                                   ],
                                 ),
                                 Row(

@@ -4,6 +4,6 @@ import 'package:android_camera_comparison/secondary/list_lensa_compare.dart';
 import 'package:android_camera_comparison/secondary/detail_compare.dart';
 import 'package:flutter/cupertino.dart';
 
-class ListLensaCompare extends StatelessWidget {
-  final information
-}
+// class ListLensaCompare extends StatelessWidget {
+//
+// }
