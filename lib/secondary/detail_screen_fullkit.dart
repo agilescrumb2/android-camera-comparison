@@ -2,10 +2,10 @@ import 'package:android_camera_comparison/primary/beranda.dart';
 import 'package:flutter/material.dart';
 
 
-class DetailScreen extends StatelessWidget {
+class DetailScreenFullkit extends StatelessWidget {
   final dynamic product;
 
-  const DetailScreen({Key? key, required this.product}) : super(key: key);
+  const DetailScreenFullkit({Key? key, required this.product}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -53,12 +53,12 @@ class DetailScreen extends StatelessWidget {
             child: Column(
               children: [
                 Image.asset(
-                  product['image'],
+                  product.image,
                   height: 270,
                 ),
                 SizedBox(height: 10),
                 Text(
-                  product['nama_kamera'],
+                  product.nama_kamera,
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 24, color: Colors.white),
                 )
@@ -100,7 +100,7 @@ class DetailScreen extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          product['harga'],
+                          product.harga,
                           style: TextStyle(fontSize: 18, color: Colors.white),
                         ),
                       ],
@@ -127,7 +127,7 @@ class DetailScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['mode_af'],
+                      product.mode_af,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -156,7 +156,7 @@ class DetailScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['fokus_manual'],
+                      product.fokus_manual,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -185,7 +185,7 @@ class DetailScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['builtin_flash'],
+                      product.builtin_flash,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -214,7 +214,7 @@ class DetailScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['mode_flash'],
+                      product.mode_flash,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -243,7 +243,7 @@ class DetailScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['panjang_fokus'],
+                      product.panjang_fokus,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -272,7 +272,7 @@ class DetailScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['bidik_perdetik'],
+                      product.bidik_perdetik,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -301,7 +301,7 @@ class DetailScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['zoom_digi'],
+                      product.zoom_digi,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -330,7 +330,7 @@ class DetailScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['resolusi_gambar'],
+                      product.resolusi_gambar,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -359,7 +359,7 @@ class DetailScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['stabilizer'],
+                      product.stabilizer,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -388,7 +388,7 @@ class DetailScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['ukuran_lcd'],
+                      product.ukuran_lcd,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -417,7 +417,7 @@ class DetailScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['resolusi_lcd'],
+                      product.resolusi_lcd,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -446,7 +446,7 @@ class DetailScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['sensor'],
+                      product.sensor,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -475,7 +475,7 @@ class DetailScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['white_balance'],
+                      product.white_balance,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],

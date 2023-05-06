@@ -53,12 +53,12 @@ class DetailScreenLens extends StatelessWidget {
             child: Column(
               children: [
                 Image.asset(
-                  product['image'],
+                  product.image,
                   height: 270,
                 ),
                 SizedBox(height: 10),
                 Text(
-                  product['name'],
+                  product.name,
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 24, color: Colors.white),
                 )
@@ -100,7 +100,7 @@ class DetailScreenLens extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          product['harga'],
+                          product.harga,
                           style: TextStyle(fontSize: 18, color: Colors.white),
                         ),
                       ],
@@ -127,7 +127,7 @@ class DetailScreenLens extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['bobot'],
+                      product.bobot,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -156,7 +156,7 @@ class DetailScreenLens extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['diameter'],
+                      product.diameter,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -185,7 +185,7 @@ class DetailScreenLens extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['apeture'],
+                      product.apeture,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -214,7 +214,7 @@ class DetailScreenLens extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['filter'],
+                      product.filter,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -243,7 +243,7 @@ class DetailScreenLens extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['fokus'],
+                      product.fokus,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -272,7 +272,7 @@ class DetailScreenLens extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['zoom'],
+                      product.zoom,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -301,7 +301,7 @@ class DetailScreenLens extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['diafragma'],
+                      product.diafragma,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],

@@ -53,12 +53,12 @@ class DetailScreenBody extends StatelessWidget {
             child: Column(
               children: [
                 Image.asset(
-                  product['image'],
+                  product.image,
                   height: 270,
                 ),
                 SizedBox(height: 10),
                 Text(
-                  product['name'],
+                  product.name,
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 24, color: Colors.white),
                 )
@@ -100,7 +100,7 @@ class DetailScreenBody extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          product['harga'],
+                          product.harga,
                           style: TextStyle(fontSize: 18, color: Colors.white),
                         ),
                       ],
@@ -127,7 +127,7 @@ class DetailScreenBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['mode_af'],
+                      product.mode_af,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -156,7 +156,7 @@ class DetailScreenBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['builtin_flash'],
+                      product.builtin_flash,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -185,7 +185,7 @@ class DetailScreenBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['bidik_perdetik'],
+                      product.bidik_perdetik,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -214,7 +214,7 @@ class DetailScreenBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['dimensi'],
+                      product.dimensi,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -243,7 +243,7 @@ class DetailScreenBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['iso'],
+                      product.iso,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -272,7 +272,7 @@ class DetailScreenBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['exposure'],
+                      product.exposure,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -301,7 +301,7 @@ class DetailScreenBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['mode_flash'],
+                      product.mode_flash,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -330,7 +330,7 @@ class DetailScreenBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['resolusi_gambar'],
+                      product.resolusi_gambar,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -359,7 +359,7 @@ class DetailScreenBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['image_stabilizer'],
+                      product.image_stabilizer,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -388,7 +388,7 @@ class DetailScreenBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['monitor_lcd'],
+                      product.monitor_lcd,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -417,7 +417,7 @@ class DetailScreenBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['fokus_manual'],
+                      product.fokus_manual,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -446,7 +446,7 @@ class DetailScreenBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['mode_pemotretan'],
+                      product.mode_pemotretan,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -475,7 +475,7 @@ class DetailScreenBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['ukuran_sensor'],
+                      product.ukuran_sensor,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -504,7 +504,7 @@ class DetailScreenBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['rentang_rana'],
+                      product.rentang_rana,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -533,7 +533,7 @@ class DetailScreenBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['bobot'],
+                      product.bobot,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],
@@ -562,7 +562,7 @@ class DetailScreenBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      product['white_balance'],
+                      product.white_balance,
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ],

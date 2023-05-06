@@ -206,7 +206,7 @@ class _ListFullkitCompareState extends State<ListFullkitCompare> {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                DetailScreenBody(product: fullkit),
+                                DetailScreenFullkit(product: fullkit),
                           ),
                         );
                       },
