@@ -133,32 +133,32 @@ class ListFullkit extends StatelessWidget {
               child: SizedBox(
                 width: 400,
                 child: Row(
-                  children: [
-                    Expanded(
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Cari Barang Yang Ingin Dilihat',
-                          border: InputBorder.none,
-                          contentPadding: EdgeInsets.symmetric(horizontal: 16),
-                        ),
-                        // onChanged: (value) {
-                        //   setState(() {
-                        //     query = value;
-                        //   });
-                        // },
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 4.5),
-                      child: CircleAvatar(
-                        backgroundColor: Colors.deepPurple,
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(Icons.search, color: Colors.white)
-                        ),
-                      ),
-                    ),
-                  ],
+                  // children: [
+                  //   Expanded(
+                  //     child: TextField(
+                  //       decoration: InputDecoration(
+                  //         hintText: 'Cari Barang Yang Ingin Dilihat',
+                  //         border: InputBorder.none,
+                  //         contentPadding: EdgeInsets.symmetric(horizontal: 16),
+                  //       ),
+                  //       // onChanged: (value) {
+                  //       //   setState(() {
+                  //       //     query = value;
+                  //       //   });
+                  //       // },
+                  //     ),
+                  //   ),
+                  //   Padding(
+                  //     padding: const EdgeInsets.only(right: 4.5),
+                  //     child: CircleAvatar(
+                  //       backgroundColor: Colors.deepPurple,
+                  //       child: IconButton(
+                  //           onPressed: () {},
+                  //           icon: Icon(Icons.search, color: Colors.white)
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ],
                 ),
               ),
             ),

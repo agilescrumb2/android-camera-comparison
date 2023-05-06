@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/primary/beranda.dart';
 import 'package:android_camera_comparison/secondary/detail_screen_fullkit.dart';
 import 'package:android_camera_comparison/primary/splash_screen.dart';
-
-import 'detail_compare.dart';
+import 'package:android_camera_comparison/secondary/detail_compare.dart';
 
 class ListLensaCompare extends StatefulWidget {
   @override
@@ -12,6 +11,7 @@ class ListLensaCompare extends StatefulWidget {
 }
 
 class _ListLensaCompareState extends State<ListLensaCompare> {
+  // final List<Map<String, dynamic>> detailCompareLensa = [];
   final List<Map<String, dynamic>> information = [
     {
       'name': 'EF-M55-200mm f/4.5-6.3 IS STM',
@@ -81,9 +81,6 @@ class _ListLensaCompareState extends State<ListLensaCompare> {
     },
   ];
 
-  int checkedCount = 0;
-  int maxChecked = 2;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -115,32 +112,32 @@ class _ListLensaCompareState extends State<ListLensaCompare> {
               child: SizedBox(
                 width: 400,
                 child: Row(
-                  children: [
-                    Expanded(
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Cari Barang Yang Ingin Dilihat',
-                          border: InputBorder.none,
-                          contentPadding: EdgeInsets.symmetric(horizontal: 16),
-                        ),
-                        // onChanged: (value) {
-                        //   setState(() {
-                        //     query = value;
-                        //   });
-                        // },
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 4.5),
-                      child: CircleAvatar(
-                        backgroundColor: Colors.deepPurple,
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(Icons.search, color: Colors.white)
-                        ),
-                      ),
-                    ),
-                  ],
+                  // children: [
+                  //   Expanded(
+                  //     child: TextField(
+                  //       decoration: InputDecoration(
+                  //         hintText: 'Cari Barang Yang Ingin Dilihat',
+                  //         border: InputBorder.none,
+                  //         contentPadding: EdgeInsets.symmetric(horizontal: 16),
+                  //       ),
+                  //       // onChanged: (value) {
+                  //       //   setState(() {
+                  //       //     query = value;
+                  //       //   });
+                  //       // },
+                  //     ),
+                  //   ),
+                  //   Padding(
+                  //     padding: const EdgeInsets.only(right: 4.5),
+                  //     child: CircleAvatar(
+                  //       backgroundColor: Colors.deepPurple,
+                  //       child: IconButton(
+                  //           onPressed: () {},
+                  //           icon: Icon(Icons.search, color: Colors.white)
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ],
                 ),
               ),
             ),
@@ -287,9 +284,15 @@ class _ListLensaCompareState extends State<ListLensaCompare> {
                     children: [Text('Compare', style: TextStyle(color: Colors.white))],
                   ),
                   onTap: (){
+                    List<Map<String, dynamic>> selectedItems = [];
+                    for (var item in information) {
+                      if (item['wish'] == true) {
+                        selectedItems.add(item);
+                      }
+                    }
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => DetailCompare())
+                      context,
+                      MaterialPageRoute(builder: (context) => DetailCompare(selectedItems: selectedItems)),
                     );
                   },
                 )
