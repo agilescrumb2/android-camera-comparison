@@ -259,7 +259,8 @@ class _ListLensaCompareState extends State<ListLensaCompare> {
                                       );
                                     },
                                   );
-                                } else {
+                                }
+                                else {
                                   setState(() {
                                     lensa.wish = newValue!;
                                     selectedProducts.add(lensa);
@@ -295,10 +296,41 @@ class _ListLensaCompareState extends State<ListLensaCompare> {
                     children: [Text('Compare', style: TextStyle(color: Colors.white))],
                   ),
                   onTap: (){
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => DetailCompareLensa(item1: selectedProducts[0], item2: selectedProducts[1]))
-                    );
+                    if (checkedCount != 2) {
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            icon : Icon(Icons.dangerous_outlined, size: 100),
+                            iconColor: Colors.deepPurple,
+                            title: Text('Limit Not Reached'),
+                            content: Text("You have to select 2 items."),
+                            actions: [
+                              TextButton(
+                                child: Container(
+                                  height: 50,
+                                  width: 100,
+                                  color: Colors.deepPurple,
+                                  padding: EdgeInsets.only(top: 14),
+                                  child: Text('OK', textAlign: TextAlign.center, style: TextStyle(color: Colors.white)),
+                                ),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    }
+                    else {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>
+                              DetailCompareLensa(item1: selectedProducts[0],
+                                  item2: selectedProducts[1]))
+                      );
+                    }
                   },
                 )
             )
