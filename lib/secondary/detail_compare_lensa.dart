@@ -1,7 +1,7 @@
-import 'package:android_camera_comparison/model/lensa_list.dart';
+import 'package:android_camera_comparison/models/lensa.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../model/kamera_list.dart';
+import '../models/kamera.dart';
 
 class DetailCompareLensa extends StatelessWidget{
   final Lensa item1;

@@ -3,8 +3,7 @@ import 'package:android_camera_comparison/secondary/detail_compare_kamera.dart';
 import 'package:android_camera_comparison/secondary/detail_screen_body.dart';
 import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/primary/beranda.dart';
-
-import '../model/kamera_list.dart';
+import '../models/kamera.dart';
 
 class ListKameraCompare extends StatefulWidget {
   @override
@@ -34,7 +33,7 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
         white_balance: 'Auto (Ambience priority), Auto (White priority), Preset (Daylight, Shade, Cloudy, Tungsten light, White fluorescent light, Flash), Custom 1-5, pengaturan suhu Warna (kira-kira 2500-10000 K), koreksi White Balance dan white balance bracketing*2',
         harga: 'Rp. 133,000,200.00',
         image: 'assets/img/body1.png',
-        wish: false
+        // wish: false
     ),
     Kamera(
         name: 'EOS 5D Mark IV (Bodi)',
@@ -57,7 +56,7 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
         white_balance: 'Auto (Ambience priority), Auto (White priority), Preset (Daylight, Shade, Cloudy, Tungsten light, White fluorescent light, Flash), Color temperature setting (approx. 2500-10000 K), Personal white balance',
         harga: 'Rp. 55,888,500.00',
         image: 'assets/img/body2.png',
-        wish: false
+        // wish: false
     ),
     Kamera(
         name: 'EOS R10 (Bodi)',
@@ -80,7 +79,7 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
         white_balance: 'Auto (Ambience priority / White priority), Daylight, Shade, Cloudy (Efektif untuk suasana subuh dan senja hari), Tungsten light, cahaya Neon Putih, Flash*, Custom, tersedia fitur Pengaturan suhu warna (sekitar 2500–10000 K) White balance shift dan white balance bracketing *Memungkinkan untuk melakukan transmisi informasi suhu warna Lampu Kilat (EX / EL Series Speedlite)',
         harga: 'Rp. IDR 20,113,200.00',
         image: 'assets/img/body3.png',
-        wish: false
+        // wish: false
     ),
     Kamera(
         name: 'EOS 6D Mark II (Bodi)',
@@ -103,7 +102,7 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
         white_balance: 'Auto (Ambience priority), Auto (White priority), Preset (Daylight, Shade, Cloudy, Tungsten light, White fluorescent light, Flash), Custom, Color temperature setting (approx. 2500-10000 K), White balance correction and white balance bracketing features provided * Flash color temperature information transmission possible',
         harga: 'Rp. IDR 31,290,900.00',
         image: 'assets/img/body4.png',
-        wish: false
+        // wish: false
     ),
     Kamera(
         name: 'EOS R (Bodi)',
@@ -126,7 +125,7 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
         white_balance: 'Auto (Ambience priority), Auto (White priority), Preset (Daylight, Shade, Cloudy, Tungsten light, White fluorescent light, Flash), Custom, pengaturan suhu Warna (Kira-kira 2500-10000 K), koreksi White balance dan White balance bracketing, tersedia * Memungkinkan Transmisi informasi suhu warna flash (lampu kilat)',
         harga: 'Rp. IDR 30,169,800.00',
         image: 'assets/img/body5.png',
-        wish: false
+        // wish: false
     ),
   ];
   List<Kamera> selectedProducts = [];
@@ -267,51 +266,51 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
                               ),
                             ),
                           ),
-                          Checkbox(
-                            value: kamera.wish,
-                            onChanged: (newValue) {
-                              int checkedCount = selectedProducts.length;
-                              if (newValue == true) {
-                                if (checkedCount >= 2) {
-                                  showDialog(
-                                    context: context,
-                                    builder: (BuildContext context) {
-                                      return AlertDialog(
-                                        icon : Icon(Icons.dangerous_outlined, size: 100),
-                                        iconColor: Colors.deepPurple,
-                                        title: Text('Limit Reached'),
-                                        content: Text("You can only select up to 2 items."),
-                                        actions: [
-                                          TextButton(
-                                            child: Container(
-                                              height: 50,
-                                              width: 100,
-                                              color: Colors.deepPurple,
-                                              padding: EdgeInsets.only(top: 14),
-                                              child: Text('OK', textAlign: TextAlign.center, style: TextStyle(color: Colors.white)),
-                                            ),
-                                            onPressed: () {
-                                              Navigator.of(context).pop();
-                                            },
-                                          ),
-                                        ],
-                                      );
-                                    },
-                                  );
-                                } else {
-                                  setState(() {
-                                    kamera.wish = newValue!;
-                                    selectedProducts.add(kamera);
-                                  });
-                                }
-                              } else {
-                                setState(() {
-                                  kamera.wish = newValue!;
-                                  selectedProducts.remove(kamera);
-                                });
-                              }
-                            },
-                          )
+                          // Checkbox(
+                          //   value: kamera.wish,
+                          //   onChanged: (newValue) {
+                          //     int checkedCount = selectedProducts.length;
+                          //     if (newValue == true) {
+                          //       if (checkedCount >= 2) {
+                          //         showDialog(
+                          //           context: context,
+                          //           builder: (BuildContext context) {
+                          //             return AlertDialog(
+                          //               icon : Icon(Icons.dangerous_outlined, size: 100),
+                          //               iconColor: Colors.deepPurple,
+                          //               title: Text('Limit Reached'),
+                          //               content: Text("You can only select up to 2 items."),
+                          //               actions: [
+                          //                 TextButton(
+                          //                   child: Container(
+                          //                     height: 50,
+                          //                     width: 100,
+                          //                     color: Colors.deepPurple,
+                          //                     padding: EdgeInsets.only(top: 14),
+                          //                     child: Text('OK', textAlign: TextAlign.center, style: TextStyle(color: Colors.white)),
+                          //                   ),
+                          //                   onPressed: () {
+                          //                     Navigator.of(context).pop();
+                          //                   },
+                          //                 ),
+                          //               ],
+                          //             );
+                          //           },
+                          //         );
+                          //       } else {
+                          //         setState(() {
+                          //           kamera.wish = newValue!;
+                          //           selectedProducts.add(kamera);
+                          //         });
+                          //       }
+                          //     } else {
+                          //       setState(() {
+                          //         kamera.wish = newValue!;
+                          //         selectedProducts.remove(kamera);
+                          //       });
+                          //     }
+                          //   },
+                          // )
                         ],
                       ),
                     ),

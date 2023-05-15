@@ -5,8 +5,7 @@ import 'package:android_camera_comparison/primary/beranda.dart';
 import 'package:android_camera_comparison/secondary/detail_screen_fullkit.dart';
 import 'package:android_camera_comparison/primary/splash_screen.dart';
 import 'package:android_camera_comparison/secondary/detail_compare.dart';
-
-import '../model/lensa_list.dart';
+import '../models/lensa.dart';
 
 class ListLensaCompare extends StatefulWidget {
   @override

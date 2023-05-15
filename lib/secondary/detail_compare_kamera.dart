@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../model/kamera_list.dart';
+import '../models/kamera.dart';
 
 class DetailCompareKamera extends StatelessWidget{
   final Kamera item1;

@@ -1,4 +1,4 @@
-import 'package:android_camera_comparison/model/fullkit_list.dart';
+import 'package:android_camera_comparison/models/fullkit.dart';
 import 'package:android_camera_comparison/secondary/detail_compare_fullkit.dart';
 import 'package:android_camera_comparison/secondary/detail_screen_body.dart';
 import 'package:flutter/material.dart';

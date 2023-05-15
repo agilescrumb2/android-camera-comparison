@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../model/fullkit_list.dart';
-import '../model/kamera_list.dart';
+import '../models/fullkit.dart';
+import '../models/kamera.dart';
 
 class DetailCompareFullkit extends StatelessWidget{
   final Fullkit item1;
