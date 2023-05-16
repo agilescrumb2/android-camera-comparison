@@ -130,8 +130,6 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
     ),
   ];
   List<Kamera> selectedProducts = [];
-  int checkedCount = 0;
-  int maxChecked = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -270,9 +268,8 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
                           Checkbox(
                             value: kamera.wish,
                             onChanged: (newValue) {
-                              int checkedCount = selectedProducts.length;
                               if (newValue == true) {
-                                if (checkedCount >= 2) {
+                                if (selectedProducts.length == 2) {
                                   showDialog(
                                     context: context,
                                     builder: (BuildContext context) {
@@ -333,7 +330,7 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
               children: [Text('Compare', style: TextStyle(color: Colors.white))],
             ),
             onTap: (){
-              if (checkedCount != 2) {
+              if (selectedProducts.length != 2) {
                 showDialog(
                   context: context,
                   builder: (BuildContext context) {

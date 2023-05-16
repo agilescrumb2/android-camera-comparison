@@ -237,6 +237,7 @@ class DetailScreenLens extends StatelessWidget {
                           Padding(padding: EdgeInsets.only(left: 5, right: 5)),
                           Text(
                             'Jarak Pemfokusan Terdekat (m, kaki)',
+                            maxLines: 2,
                             style: TextStyle(fontSize: 18, color: Colors.white),
                           ),
                         ],
