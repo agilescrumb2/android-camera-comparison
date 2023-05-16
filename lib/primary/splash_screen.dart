@@ -28,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
         width: size.width,
         height: size.height,
         child: Image.asset(
-          'assets/img/intro.png',
+          'assets/img/splash.png',
           fit: BoxFit.cover,
           width: size.width,
           height: size.height,
@@ -36,22 +36,4 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
     );
   }
-  // Widget build(BuildContext context){
-  //   return Scaffold(
-  //     backgroundColor: Colors.white,
-  //     body: Center(
-  //       child: Card(
-  //         child: Image.asset(
-  //           'assets/img/intro.png',
-  //           fit: BoxFit.cover,
-  //         ),
-  //         shape: RoundedRectangleBorder(
-  //           borderRadius: BorderRadius.circular(10.0),
-  //         ),
-  //         elevation: 5,
-  //         margin: EdgeInsets.all(10),
-  //       ),
-  //     ),
-  //   );
-  // }
 }
