@@ -1,10 +1,10 @@
-import 'package:android_camera_comparison/secondary/detail_compare_lensa.dart';
-import 'package:android_camera_comparison/secondary/detail_screen_lens.dart';
+import 'package:android_camera_comparison/comparisons/detail_compare_lensa.dart';
+import 'package:android_camera_comparison/details/detail_screen_lens.dart';
 import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/primary/beranda.dart';
-import 'package:android_camera_comparison/secondary/detail_screen_fullkit.dart';
+import 'package:android_camera_comparison/details/detail_screen_fullkit.dart';
 import 'package:android_camera_comparison/primary/splash_screen.dart';
-import 'package:android_camera_comparison/secondary/detail_compare.dart';
+import 'package:android_camera_comparison/comparisons/detail_compare.dart';
 import '../models/lensa.dart';
 
 class ListLensaCompare extends StatefulWidget {

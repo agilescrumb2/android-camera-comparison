@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
-import '../primary/beranda.dart';
+import 'beranda.dart';
 
 class KategoriCompare extends StatelessWidget{
   const KategoriCompare({super.key});

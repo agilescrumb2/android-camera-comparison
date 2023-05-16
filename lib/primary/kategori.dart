@@ -1,12 +1,11 @@
 import 'package:android_camera_comparison/primary/splash_screen.dart';
-import 'package:android_camera_comparison/secondary/list_body_compare.dart';
-import 'package:android_camera_comparison/secondary/list_lensa_compare.dart';
+import 'package:android_camera_comparison/lists/list_body_compare.dart';
+import 'package:android_camera_comparison/lists/list_lensa_compare.dart';
 import 'package:flutter/material.dart';
-import 'package:android_camera_comparison/secondary/list_body.dart';
-import 'package:android_camera_comparison/secondary/detail_screen_fullkit.dart';
-import 'package:android_camera_comparison/secondary/compare_item.dart';
-
-import 'list_fullkit_compare.dart';
+import 'package:android_camera_comparison/lists/list_body.dart';
+import 'package:android_camera_comparison/details/detail_screen_fullkit.dart';
+import 'package:android_camera_comparison/comparisons/compare_item.dart';
+import '../lists/list_fullkit_compare.dart';
 
 class KategoriCompare extends StatefulWidget {
   const KategoriCompare({Key? key}) : super(key: key);
@@ -93,11 +92,11 @@ class _KategoriCompareState extends State<KategoriCompare> {
                                 padding: const EdgeInsets.all(16.0),
                                 child: InkWell(
                                   onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => ListKameraCompare()),
-                                    );
+                                    // Navigator.push(
+                                    //   context,
+                                    //   MaterialPageRoute(
+                                    //       builder: (context) => ListKameraCompare()),
+                                    // );
                                   },
                                   splashColor: Colors.blueAccent,
                                   child: Center(

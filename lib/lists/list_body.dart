@@ -1,5 +1,5 @@
 import 'package:android_camera_comparison/models/kamera.dart';
-import 'package:android_camera_comparison/secondary/detail_screen_body.dart';
+import 'package:android_camera_comparison/details/detail_screen_body.dart';
 import 'package:android_camera_comparison/services/remote_service.dart';
 import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/primary/beranda.dart';
@@ -252,8 +252,8 @@ class _ListKameraState extends State<ListKamera> {
                                   bottomLeft: Radius.circular(15.0)
                               ),
                               image: DecorationImage(
-                                image: AssetImage(
-                                  kameras![index].image,
+                                image: NetworkImage(
+                                  kameras![index].gambar,
                                 ),
                                 fit: BoxFit.cover,
                               ),
@@ -266,7 +266,7 @@ class _ListKameraState extends State<ListKamera> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    kameras![index].name,
+                                    kameras![index].nama_kamera,
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 24,

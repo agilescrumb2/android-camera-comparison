@@ -1,9 +1,9 @@
 import 'package:android_camera_comparison/models/fullkit.dart';
-import 'package:android_camera_comparison/secondary/detail_compare_fullkit.dart';
-import 'package:android_camera_comparison/secondary/detail_screen_body.dart';
+import 'package:android_camera_comparison/comparisons/detail_compare_fullkit.dart';
+import 'package:android_camera_comparison/details/detail_screen_body.dart';
 import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/primary/beranda.dart';
-import 'package:android_camera_comparison/secondary/detail_screen_fullkit.dart';
+import 'package:android_camera_comparison/details/detail_screen_fullkit.dart';
 import 'package:android_camera_comparison/primary/splash_screen.dart';
 
 class ListFullkitCompare extends StatefulWidget {

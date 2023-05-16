@@ -1,11 +1,11 @@
-import 'package:android_camera_comparison/secondary/detail_compare.dart';
-import 'package:android_camera_comparison/secondary/list_fullkit.dart';
-import 'package:android_camera_comparison/secondary/list_lensa.dart';
+import 'package:android_camera_comparison/comparisons/detail_compare.dart';
+import 'package:android_camera_comparison/lists/list_fullkit.dart';
+import 'package:android_camera_comparison/lists/list_lensa.dart';
 import 'package:flutter/material.dart';
-import 'package:android_camera_comparison/secondary/list_body.dart';
-import 'package:android_camera_comparison/secondary/compare_item.dart';
-import 'package:android_camera_comparison/secondary/detail_screen_fullkit.dart';
-import 'package:android_camera_comparison/secondary/kategori.dart';
+import 'package:android_camera_comparison/lists/list_body.dart';
+import 'package:android_camera_comparison/comparisons/compare_item.dart';
+import 'package:android_camera_comparison/details/detail_screen_fullkit.dart';
+import 'package:android_camera_comparison/primary/kategori.dart';
 import 'package:android_camera_comparison/primary/splash_screen.dart';
 
 class HomePage extends StatefulWidget {
@@ -48,10 +48,10 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.only(right: 20.0),
               icon: Image.asset('assets/img/white.png'),
               onPressed: (){
-                Navigator.pop(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => SplashScreen()),
+                      builder: (context) => HomePage()),
                 );
               },
           ),

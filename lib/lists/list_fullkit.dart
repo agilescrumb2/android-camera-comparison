@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/primary/beranda.dart';
-import 'package:android_camera_comparison/secondary/detail_screen_fullkit.dart';
+import 'package:android_camera_comparison/details/detail_screen_fullkit.dart';
 import 'package:android_camera_comparison/primary/splash_screen.dart';
 import '../models/fullkit.dart';
 
