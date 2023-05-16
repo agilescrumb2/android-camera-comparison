@@ -117,10 +117,6 @@ class _ListFullkitCompareState extends State<ListFullkitCompare> {
 
   List<Fullkit> selectedProducts = [];
 
-  int checkedCount = 0;
-
-  int maxChecked = 2;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -264,9 +260,8 @@ class _ListFullkitCompareState extends State<ListFullkitCompare> {
                           Checkbox(
                             value: fullkit.wish,
                             onChanged: (newValue) {
-                              int checkedCount = selectedProducts.length;
                               if (newValue == true) {
-                                if (checkedCount >= 2) {
+                                if (selectedProducts.length == 2) {
                                   showDialog(
                                     context: context,
                                     builder: (BuildContext context) {
@@ -327,7 +322,7 @@ class _ListFullkitCompareState extends State<ListFullkitCompare> {
                     children: [Text('Compare', style: TextStyle(color: Colors.white))],
                   ),
                   onTap: (){
-                    if (checkedCount != 2) {
+                    if (selectedProducts.length != 2) {
                       showDialog(
                         context: context,
                         builder: (BuildContext context) {
