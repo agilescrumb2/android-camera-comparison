@@ -134,11 +134,11 @@ class _KategoriCompareState extends State<KategoriCompare> {
                                 padding: const EdgeInsets.all(16.0),
                                 child: InkWell(
                                   onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => ListLensaCompare()),
-                                    );
+                                    // Navigator.push(
+                                    //   context,
+                                    //   MaterialPageRoute(
+                                    //       builder: (context) => ListLensaCompare()),
+                                    // );
                                   },
                                   splashColor: Colors.blueAccent,
                                   child: Center(
@@ -175,11 +175,11 @@ class _KategoriCompareState extends State<KategoriCompare> {
                           padding: const EdgeInsets.all(8.0),
                           child: InkWell(
                             onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ListFullkitCompare()),
-                              );
+                              // Navigator.push(
+                              //   context,
+                              //   MaterialPageRoute(
+                              //       builder: (context) => ListFullkitCompare()),
+                              // );
                             },
                             splashColor: Colors.blueAccent,
                             child: Center(

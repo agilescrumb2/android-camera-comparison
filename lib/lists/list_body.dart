@@ -1,6 +1,6 @@
 import 'package:android_camera_comparison/models/kamera.dart';
 import 'package:android_camera_comparison/details/detail_screen_body.dart';
-import 'package:android_camera_comparison/services/remote_service.dart';
+import 'package:android_camera_comparison/services/remote_service_kamera.dart';
 import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/primary/beranda.dart';
 
@@ -138,7 +138,7 @@ class _ListKameraState extends State<ListKamera> {
   }
 
   getData() async {
-    kameras = await RemoteService().getKameras();
+    kameras = await RemoteServiceKamera().getKameras();
     if(kameras != null) {
       setState(() {
         isLoaded = true;
@@ -217,8 +217,11 @@ class _ListKameraState extends State<ListKamera> {
             Expanded(
               child: ListView.builder(
                 physics: BouncingScrollPhysics(),
-                itemCount: kameras?.length,
+                itemCount: kameras?.length ?? 0,
                 itemBuilder: (BuildContext context, int index) {
+                  if (kameras == null) return null;
+                  final kamera = kameras?[index];
+                  if (kamera == null) return null;
                   return Card(
                     margin: const EdgeInsets.all(6),
                     shape: RoundedRectangleBorder(
@@ -231,7 +234,7 @@ class _ListKameraState extends State<ListKamera> {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                DetailScreenBody(product: kameras![index]),
+                                DetailScreenBody(product: kamera),
                           ),
                         );
                       },
@@ -253,7 +256,7 @@ class _ListKameraState extends State<ListKamera> {
                               ),
                               image: DecorationImage(
                                 image: NetworkImage(
-                                  kameras![index].gambar,
+                                  kamera.gambar,
                                 ),
                                 fit: BoxFit.cover,
                               ),
@@ -266,7 +269,7 @@ class _ListKameraState extends State<ListKamera> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    kameras![index].nama_kamera,
+                                    kamera.nama_kamera,
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 24,
@@ -275,7 +278,7 @@ class _ListKameraState extends State<ListKamera> {
                                   SizedBox(height: 8),
                                   SizedBox(height: 8),
                                   Text(
-                                    kameras![index].harga,
+                                    'Rp. ${kamera.harga}',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 21,
