@@ -24,7 +24,7 @@ class Fullkit{
   String white_balance;
   String harga;
   String gambar;
-  // bool wish;
+  bool wish;
 
   Fullkit({
     required this.id,
@@ -50,7 +50,7 @@ class Fullkit{
     required this.white_balance,
     required this.harga,
     required this.gambar,
-    // required this.wish,
+    this.wish = false,
   });
 
   factory Fullkit.fromJson(Map<String, dynamic> json) {

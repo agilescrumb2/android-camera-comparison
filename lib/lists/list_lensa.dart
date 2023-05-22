@@ -1,4 +1,4 @@
-import 'package:android_camera_comparison/details/detail_screen_lens.dart';
+import 'package:android_camera_comparison/details/detail_screen_lensa.dart';
 import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/primary/beranda.dart';
 import 'package:android_camera_comparison/services/remote_service_lensa.dart';
@@ -10,7 +10,7 @@ class ListLensa extends StatefulWidget {
   ListLensa({Key? key}) : super(key: key);
   @override
   _ListLensaState createState() => _ListLensaState();
-// final List<Lensa> information = [
+  // final List<Lensa> information = [
 //   Lensa(
 //       name: 'EF-M55-200mm f/4.5-6.3 IS STM',
 //       bobot: '260',
@@ -187,7 +187,7 @@ class _ListLensaState extends State<ListLensa> {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                DetailScreenLens(product: lensa),
+                                DetailScreenLensa(product: lensa),
                           ),
                         );
                       },

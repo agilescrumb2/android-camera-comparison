@@ -1,20 +1,19 @@
 import 'package:android_camera_comparison/primary/beranda.dart';
 import 'package:flutter/material.dart';
-import '../models/fullkit.dart';
-import 'package:android_camera_comparison/services/remote_service_fullkit.dart';
+import 'package:android_camera_comparison/models/lensa.dart';
+import 'package:android_camera_comparison/services/remote_service_lensa.dart';
 
-
-class DetailScreenFullkit extends StatefulWidget {
+class DetailScreenLensa extends StatefulWidget {
   final dynamic product;
 
-  DetailScreenFullkit({Key? key, required this.product}) : super(key: key);
+  DetailScreenLensa({Key? key, required this.product}) : super(key: key);
 
   @override
-  _DetailScreenFullkit createState() => _DetailScreenFullkit();
+  _DetailScreenLensa createState() => _DetailScreenLensa();
 }
 
-class _DetailScreenFullkit extends State<DetailScreenFullkit> {
-  List<Fullkit>? fullkits;
+class _DetailScreenLensa extends State<DetailScreenLensa> {
+  List<Lensa>? lensas;
   var isLoaded = false;
 
   @override
@@ -24,8 +23,8 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
   }
 
   getData() async {
-    fullkits = await RemoteServiceFullkit().getFullkits();
-    if(fullkits != null) {
+    lensas = await RemoteServiceLensa().getLensas();
+    if (lensas != null) {
       setState(() {
         isLoaded = true;
       });
@@ -68,11 +67,11 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
       ),
       body: ListView.builder(
           physics: BouncingScrollPhysics(),
-          itemCount: fullkits?.length ?? 0,
+          itemCount: lensas?.length ?? 0,
           itemBuilder: (BuildContext context, int index) {
-            if (fullkits == null) return null;
-            final fullkit = fullkits?[index];
-            if (fullkit == null) return null;
+            if (lensas == null) return null;
+            final lensa = lensas?[index];
+            if (lensa == null) return null;
             return ListView(
               children: [
                 Container(
@@ -87,12 +86,12 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                   child: Column(
                     children: [
                       Image.network(
-                        fullkit.gambar,
+                        lensa.gambar,
                         height: 270,
                       ),
                       SizedBox(height: 10),
                       Text(
-                        fullkit.nama_fulkit,
+                        lensa.nama_lensa,
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 24, color: Colors.white),
                       )
@@ -102,7 +101,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                 SizedBox(height: 10),
                 Container(
                   padding: EdgeInsets.all(30),
-                  height: 1200,
+                  height: 550,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.only(topLeft: Radius.circular(40),
                           topRight: Radius.circular(40)),
@@ -137,7 +136,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                 ),
                               ),
                               Text(
-                                fullkit.harga,
+                                lensa.harga,
                                 style: TextStyle(fontSize: 18, color: Colors.white),
                               ),
                             ],
@@ -157,14 +156,14 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                 ),
                                 Padding(padding: EdgeInsets.only(left: 5, right: 5)),
                                 Text(
-                                  'Mode Af',
+                                  'Bobot (g)',
                                   style: TextStyle(fontSize: 18, color: Colors.white),
                                 ),
                               ],
                             ),
                           ),
                           Text(
-                            fullkit.mode_af,
+                            lensa.bobot,
                             style: TextStyle(fontSize: 18, color: Colors.white),
                           ),
                         ],
@@ -186,14 +185,14 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                 ),
                                 Padding(padding: EdgeInsets.only(left: 5, right: 5)),
                                 Text(
-                                  'Fokus Manual',
+                                  'Diameter x Panjang (mm)',
                                   style: TextStyle(fontSize: 18, color: Colors.white),
                                 ),
                               ],
                             ),
                           ),
                           Text(
-                            fullkit.fokus_manual,
+                            lensa.diameter_panjang,
                             style: TextStyle(fontSize: 18, color: Colors.white),
                           ),
                         ],
@@ -215,14 +214,14 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                 ),
                                 Padding(padding: EdgeInsets.only(left: 5, right: 5)),
                                 Text(
-                                  'Built in Flash',
+                                  'Apeture Minimum',
                                   style: TextStyle(fontSize: 18, color: Colors.white),
                                 ),
                               ],
                             ),
                           ),
                           Text(
-                            fullkit.built_in_flash,
+                            lensa.aperture_minimum,
                             style: TextStyle(fontSize: 18, color: Colors.white),
                           ),
                         ],
@@ -244,14 +243,14 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                 ),
                                 Padding(padding: EdgeInsets.only(left: 5, right: 5)),
                                 Text(
-                                  'Mode Flash',
+                                  'Ukuran Filter (mm)',
                                   style: TextStyle(fontSize: 18, color: Colors.white),
                                 ),
                               ],
                             ),
                           ),
                           Text(
-                            fullkit.mode_flash,
+                            lensa.ukuran_filter,
                             style: TextStyle(fontSize: 18, color: Colors.white),
                           ),
                         ],
@@ -273,14 +272,15 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                 ),
                                 Padding(padding: EdgeInsets.only(left: 5, right: 5)),
                                 Text(
-                                  'Panjang Fokus',
+                                  'Jarak Pemfokusan Terdekat (m, kaki)',
+                                  maxLines: 2,
                                   style: TextStyle(fontSize: 18, color: Colors.white),
                                 ),
                               ],
                             ),
                           ),
                           Text(
-                            fullkit.jarak_fokus_terdekat,
+                            lensa.jarak_pemfokusan_terdekat,
                             style: TextStyle(fontSize: 18, color: Colors.white),
                           ),
                         ],
@@ -302,14 +302,14 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                 ),
                                 Padding(padding: EdgeInsets.only(left: 5, right: 5)),
                                 Text(
-                                  'Bidikan Perdetik',
+                                  'Pembesaran Maks (x)',
                                   style: TextStyle(fontSize: 18, color: Colors.white),
                                 ),
                               ],
                             ),
                           ),
                           Text(
-                            fullkit.kecepatan_pemotretan,
+                            lensa.pembesaran_maks,
                             style: TextStyle(fontSize: 18, color: Colors.white),
                           ),
                         ],
@@ -331,221 +331,19 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                 ),
                                 Padding(padding: EdgeInsets.only(left: 5, right: 5)),
                                 Text(
-                                  'Zoom Digital',
+                                  'Jumlah Bilah Diafragma',
                                   style: TextStyle(fontSize: 18, color: Colors.white),
                                 ),
                               ],
                             ),
                           ),
                           Text(
-                            fullkit.zoom_digital,
+                            lensa.jumlah_bilah_diafragma,
                             style: TextStyle(fontSize: 18, color: Colors.white),
                           ),
                         ],
                       ),
                       SizedBox(height: 10),
-                      Column(
-                        children: [
-                          Container(
-                            child: Row(
-                              children: [
-                                Padding(padding: EdgeInsets.all(15)),
-                                Container(
-                                  height: 20.0,
-                                  width: 20.0,
-                                  decoration: new BoxDecoration(
-                                    color: colorsix,
-                                    shape: BoxShape.circle,
-                                  ),
-                                ),
-                                Padding(padding: EdgeInsets.only(left: 5, right: 5)),
-                                Text(
-                                  'Resolusi Gambar',
-                                  style: TextStyle(fontSize: 18, color: Colors.white),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Text(
-                            fullkit.resolusi_gambar,
-                            style: TextStyle(fontSize: 18, color: Colors.white),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10),
-                      Column(
-                        children: [
-                          Container(
-                            child: Row(
-                              children: [
-                                Padding(padding: EdgeInsets.all(15)),
-                                Container(
-                                  height: 20.0,
-                                  width: 20.0,
-                                  decoration: new BoxDecoration(
-                                    color: colorsix,
-                                    shape: BoxShape.circle,
-                                  ),
-                                ),
-                                Padding(padding: EdgeInsets.only(left: 5, right: 5)),
-                                Text(
-                                  'Stabilizer',
-                                  style: TextStyle(fontSize: 18, color: Colors.white),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Text(
-                            fullkit.image_stabilizer,
-                            style: TextStyle(fontSize: 18, color: Colors.white),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10),
-                      Column(
-                        children: [
-                          Container(
-                            child: Row(
-                              children: [
-                                Padding(padding: EdgeInsets.all(15)),
-                                Container(
-                                  height: 20.0,
-                                  width: 20.0,
-                                  decoration: new BoxDecoration(
-                                    color: colorsix,
-                                    shape: BoxShape.circle,
-                                  ),
-                                ),
-                                Padding(padding: EdgeInsets.only(left: 5, right: 5)),
-                                Text(
-                                  'Ukuran Monitor LCD (inch)',
-                                  style: TextStyle(fontSize: 18, color: Colors.white),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Text(
-                            fullkit.monitor_lcd_ukuran,
-                            style: TextStyle(fontSize: 18, color: Colors.white),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10),
-                      Column(
-                        children: [
-                          Container(
-                            child: Row(
-                              children: [
-                                Padding(padding: EdgeInsets.all(15)),
-                                Container(
-                                  height: 20.0,
-                                  width: 20.0,
-                                  decoration: new BoxDecoration(
-                                    color: colorsix,
-                                    shape: BoxShape.circle,
-                                  ),
-                                ),
-                                Padding(padding: EdgeInsets.only(left: 5, right: 5)),
-                                Text(
-                                  'Resolusi Monitor LCD (titik)',
-                                  style: TextStyle(fontSize: 18, color: Colors.white),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Text(
-                            fullkit.monitor_lcd_resolusi,
-                            style: TextStyle(fontSize: 18, color: Colors.white),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10),
-                      Column(
-                        children: [
-                          Container(
-                            child: Row(
-                              children: [
-                                Padding(padding: EdgeInsets.all(15)),
-                                Container(
-                                  height: 20.0,
-                                  width: 20.0,
-                                  decoration: new BoxDecoration(
-                                    color: colorsix,
-                                    shape: BoxShape.circle,
-                                  ),
-                                ),
-                                Padding(padding: EdgeInsets.only(left: 5, right: 5)),
-                                Text(
-                                  'Ukuran Sensor',
-                                  style: TextStyle(fontSize: 18, color: Colors.white),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Text(
-                            fullkit.ukuran_sensor,
-                            style: TextStyle(fontSize: 18, color: Colors.white),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10),
-                      Column(
-                        children: [
-                          Container(
-                            child: Row(
-                              children: [
-                                Padding(padding: EdgeInsets.all(15)),
-                                Container(
-                                  height: 20.0,
-                                  width: 20.0,
-                                  decoration: new BoxDecoration(
-                                    color: colorsix,
-                                    shape: BoxShape.circle,
-                                  ),
-                                ),
-                                Padding(padding: EdgeInsets.only(left: 5, right: 5)),
-                                Text(
-                                  'White Balance',
-                                  style: TextStyle(fontSize: 18, color: Colors.white),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Text(
-                            fullkit.white_balance,
-                            style: TextStyle(fontSize: 18, color: Colors.white),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10),
-                      Column(
-                        children: [
-                          Container(
-                            child: Row(
-                              children: [
-                                Padding(padding: EdgeInsets.all(15)),
-                                Container(
-                                  height: 20.0,
-                                  width: 20.0,
-                                  decoration: new BoxDecoration(
-                                    color: colorsix,
-                                    shape: BoxShape.circle,
-                                  ),
-                                ),
-                                Padding(padding: EdgeInsets.only(left: 5, right: 5)),
-                                Text(
-                                  'White Balance',
-                                  style: TextStyle(fontSize: 18, color: Colors.white),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Text(
-                            fullkit.rentang_kecepatan_rana,
-                            style: TextStyle(fontSize: 18, color: Colors.white),
-                          ),
-                        ],
-                      ),
                     ],
                   ),
                 )

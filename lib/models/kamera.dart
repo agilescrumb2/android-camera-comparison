@@ -26,7 +26,7 @@ class Kamera {
   String harga;
   String gambar;
   String gambar1;
-  // bool wish;
+  bool wish;
 
   Kamera({
     required this.id,
@@ -51,7 +51,7 @@ class Kamera {
     required this.harga,
     required this.gambar,
     required this.gambar1,
-    // this.wish = false,
+    this.wish = false,
   });
 
   factory Kamera.fromJson(Map<String, dynamic> json) {

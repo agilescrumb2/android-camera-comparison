@@ -124,7 +124,7 @@ class _ListFullkitState extends State<ListFullkit> {
   }
 
   getData() async {
-    fullkits = await RemoteServiceFullkit().getLensas();
+    fullkits = await RemoteServiceFullkit().getFullkits();
     if(fullkits != null) {
       setState(() {
         isLoaded = true;

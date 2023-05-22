@@ -12,7 +12,7 @@ class Lensa{
   String jumlah_bilah_diafragma;
   String harga;
   String gambar;
-  // bool wish;
+  bool wish;
 
   Lensa({
     required this.id,
@@ -26,7 +26,7 @@ class Lensa{
     required this.jumlah_bilah_diafragma,
     required this.harga,
     required this.gambar,
-    // required this.wish,
+    this.wish = false,
   });
 
   factory Lensa.fromJson(Map<String, dynamic> json) {
