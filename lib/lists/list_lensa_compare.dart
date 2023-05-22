@@ -190,7 +190,7 @@ class _ListLensaCompareState extends State<ListLensaCompare> {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                DetailScreenLensa(product: lensa),
+                                DetailScreenLensa(),
                           ),
                         );
                       },

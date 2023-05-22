@@ -4,6 +4,7 @@ import 'package:android_camera_comparison/primary/beranda.dart';
 import 'package:android_camera_comparison/services/remote_service_lensa.dart';
 import 'package:android_camera_comparison/details/detail_screen_fullkit.dart';
 import 'package:android_camera_comparison/primary/splash_screen.dart';
+import '../details/detail_screen.dart';
 import '../models/lensa.dart';
 
 class ListLensa extends StatefulWidget {
@@ -187,7 +188,7 @@ class _ListLensaState extends State<ListLensa> {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                DetailScreenLensa(product: lensa),
+                                DetailScreen(),
                           ),
                         );
                       },

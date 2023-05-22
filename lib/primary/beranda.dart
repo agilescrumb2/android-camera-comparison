@@ -64,8 +64,8 @@ class _HomePageState extends State<HomePage> {
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/img/homecamera.png'),
-                  fit: BoxFit.none,
+                  image: AssetImage('assets/img/splash.png'),
+                  fit: BoxFit.cover,
                 ),
               ),
             ),

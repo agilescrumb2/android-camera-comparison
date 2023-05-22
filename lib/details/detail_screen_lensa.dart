@@ -4,9 +4,8 @@ import 'package:android_camera_comparison/models/lensa.dart';
 import 'package:android_camera_comparison/services/remote_service_lensa.dart';
 
 class DetailScreenLensa extends StatefulWidget {
-  final dynamic product;
 
-  DetailScreenLensa({Key? key, required this.product}) : super(key: key);
+  DetailScreenLensa({Key? key}) : super(key: key);
 
   @override
   _DetailScreenLensa createState() => _DetailScreenLensa();
