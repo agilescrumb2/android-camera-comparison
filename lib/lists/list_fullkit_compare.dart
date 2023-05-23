@@ -370,12 +370,12 @@ class _ListFullkitCompareState extends State<ListFullkitCompare> {
                       );
                     }
                     else {
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(builder: (context) =>
-                      //         DetailCompareFullkit(item1: selectedProducts[0],
-                      //             item2: selectedProducts[1]))
-                      // );
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>
+                              DetailCompareFullkit(item1: selectedProducts[0],
+                                  item2: selectedProducts[1]))
+                      );
                     }
                   },
                 )

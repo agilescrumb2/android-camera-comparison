@@ -342,12 +342,12 @@ class _ListLensaCompareState extends State<ListLensaCompare> {
                     //   );
                     // }
                     if (selectedProducts.length == 2){
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(builder: (context) =>
-                      //         DetailCompareLensa(item1: selectedProducts[0],
-                      //             item2: selectedProducts[1]))
-                      // );
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>
+                              DetailCompareLensa(item1: selectedProducts[0],
+                                  item2: selectedProducts[1]))
+                      );
                     }
                     else{
                       showDialog(

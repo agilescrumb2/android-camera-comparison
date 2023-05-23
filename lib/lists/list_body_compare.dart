@@ -343,56 +343,135 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          color: Colors.deepPurple,
-          height: 70,
-          child: GestureDetector(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [Text('COMPARE', style: TextStyle(color: Colors.white))],
-            ),
-            onTap: (){
-              if (checkedCount != 2) {
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return AlertDialog(
-                      icon : Icon(Icons.dangerous_outlined, size: 100),
-                      iconColor: Colors.deepPurple,
-                      title: Text('Limit Not Reached'),
-                      content: Text("You have to select 2 items."),
-                      actions: [
-                        TextButton(
-                          child: Container(
-                            height: 50,
-                            width: 100,
-                            color: Colors.deepPurple,
-                            padding: EdgeInsets.only(top: 14),
-                            child: Text('OK', textAlign: TextAlign.center, style: TextStyle(color: Colors.white)),
-                          ),
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                        ),
-                      ],
-                    );
+      // bottomNavigationBar: BottomAppBar(
+      //   child: Container(
+      //     color: Colors.deepPurple,
+      //     height: 70,
+      //     child: GestureDetector(
+      //       child: Row(
+      //         mainAxisAlignment: MainAxisAlignment.center,
+      //         crossAxisAlignment: CrossAxisAlignment.center,
+      //         children: [Text('COMPARE', style: TextStyle(color: Colors.white))],
+      //       ),
+      //       onTap: (){
+      //         if (checkedCount < 2) {
+      //           showDialog(
+      //             context: context,
+      //             builder: (BuildContext context) {
+      //               return AlertDialog(
+      //                 icon : Icon(Icons.dangerous_outlined, size: 100),
+      //                 iconColor: Colors.deepPurple,
+      //                 title: Text('Limit Not Reached'),
+      //                 content: Text("You have to select 2 items."),
+      //                 actions: [
+      //                   TextButton(
+      //                     child: Container(
+      //                       height: 50,
+      //                       width: 100,
+      //                       color: Colors.deepPurple,
+      //                       padding: EdgeInsets.only(top: 14),
+      //                       child: Text('OK', textAlign: TextAlign.center, style: TextStyle(color: Colors.white)),
+      //                     ),
+      //                     onPressed: () {
+      //                       Navigator.of(context).pop();
+      //                     },
+      //                   ),
+      //                 ],
+      //               );
+      //             },
+      //           );
+      //         }
+      //         else if (selectedProducts.length == 2){
+      //           Navigator.push(
+      //               context,
+      //               MaterialPageRoute(builder: (context) =>
+      //                   DetailCompareKamera(item1: selectedProducts[0],
+      //                       item2: selectedProducts[1]))
+      //           );
+      //         }
+      //       },
+      //     )
+      //   )
+      // )
+        bottomNavigationBar: BottomAppBar(
+            child: Container(
+                color: Colors.deepPurple,
+                height: 70,
+                child: GestureDetector(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text('COMPARE', style: TextStyle(color: Colors.white)),
+                    ],
+                  ),
+                  onTap: (){
+                    // if (checkedCount < 2) {
+                    //   showDialog(
+                    //     context: context,
+                    //     builder: (BuildContext context) {
+                    //       return AlertDialog(
+                    //         icon : Icon(Icons.dangerous_outlined, size: 100),
+                    //         iconColor: Colors.deepPurple,
+                    //         title: Text('Limit Not Reached'),
+                    //         content: Text("You have to select 2 items."),
+                    //         actions: [
+                    //           TextButton(
+                    //             child: Container(
+                    //               height: 50,
+                    //               width: 100,
+                    //               color: Colors.deepPurple,
+                    //               padding: EdgeInsets.only(top: 14),
+                    //               child: Text('OK', textAlign: TextAlign.center, style: TextStyle(color: Colors.white)),
+                    //             ),
+                    //             onPressed: () {
+                    //               Navigator.of(context).pop();
+                    //             },
+                    //           ),
+                    //         ],
+                    //       );
+                    //     },
+                    //   );
+                    // }
+                    if (selectedProducts.length == 2){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>
+                              DetailCompareKamera(item1: selectedProducts[0],
+                                  item2: selectedProducts[1]))
+                      );
+                    }
+                    else{
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            icon : Icon(Icons.dangerous_outlined, size: 100),
+                            iconColor: Colors.deepPurple,
+                            title: Text('Limit Not Reached'),
+                            content: Text("You have to select 2 items."),
+                            actions: [
+                              TextButton(
+                                child: Container(
+                                  height: 50,
+                                  width: 100,
+                                  color: Colors.deepPurple,
+                                  padding: EdgeInsets.only(top: 14),
+                                  child: Text('OK', textAlign: TextAlign.center, style: TextStyle(color: Colors.white)),
+                                ),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    }
                   },
-                );
-              }
-              else {
-                // Navigator.push(
-                //     context,
-                //     MaterialPageRoute(builder: (context) =>
-                //         DetailCompareKamera(item1: selectedProducts[0],
-                //             item2: selectedProducts[1]))
-                // );
-              }
-            },
-          )
+                )
+            )
         )
-      )
     );
   }
 }
