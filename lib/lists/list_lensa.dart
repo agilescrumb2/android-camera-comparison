@@ -121,7 +121,7 @@ class _ListLensaState extends State<ListLensa> {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                DetailScreen(),
+                                DetailScreenLensa(),
                           ),
                         );
                       },
@@ -200,7 +200,7 @@ class _ListLensaState extends State<ListLensa> {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                DetailScreen(),
+                                DetailScreenLensa(),
                           ),
                         );
                       },
