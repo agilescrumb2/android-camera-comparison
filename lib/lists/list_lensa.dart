@@ -97,7 +97,13 @@ class _ListLensaState extends State<ListLensa> {
         ),
       ),
       body: Container(
-        color: Colors.deepPurpleAccent,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(20.0),
+            topLeft: Radius.circular(20.0),
+          ),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -110,6 +116,7 @@ class _ListLensaState extends State<ListLensa> {
                   final lensa = searchResult?[index];
                   if (lensa == null) return null;
                   return Card(
+                    color: Colors.white38,
                     margin: const EdgeInsets.all(6),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
@@ -121,7 +128,7 @@ class _ListLensaState extends State<ListLensa> {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                DetailScreenLensa(),
+                                DetailScreenLensa(product: lensa),
                           ),
                         );
                       },
@@ -135,7 +142,7 @@ class _ListLensaState extends State<ListLensa> {
                               // gradient: LinearGradient(
                               //   begin: Alignment.topLeft,
                               //   end: Alignment.bottomRight,
-                              //   colors: [Colors.blue, Colors.green],
+                              //   colors: [Colors.blue, Colors.deepPurple],
                               // ),
                               borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(15.0),
@@ -169,7 +176,7 @@ class _ListLensaState extends State<ListLensa> {
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 21,
-                                      color: Colors.green,
+                                      color: Colors.deepPurple,
                                     ),
                                   ),
                                 ],
@@ -189,6 +196,7 @@ class _ListLensaState extends State<ListLensa> {
                   final lensa = lensas?[index];
                   if (lensa == null) return null;
                   return Card(
+                    color: Colors.white38,
                     margin: const EdgeInsets.all(6),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
@@ -200,7 +208,7 @@ class _ListLensaState extends State<ListLensa> {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                DetailScreenLensa(),
+                                DetailScreenLensa(product: lensa),
                           ),
                         );
                       },
@@ -214,7 +222,7 @@ class _ListLensaState extends State<ListLensa> {
                               // gradient: LinearGradient(
                               //   begin: Alignment.topLeft,
                               //   end: Alignment.bottomRight,
-                              //   colors: [Colors.blue, Colors.green],
+                              //   colors: [Colors.blue, Colors.deepPurple],
                               // ),
                               borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(15.0),
@@ -248,7 +256,7 @@ class _ListLensaState extends State<ListLensa> {
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 21,
-                                      color: Colors.green,
+                                      color: Colors.deepPurple,
                                     ),
                                   ),
                                 ],

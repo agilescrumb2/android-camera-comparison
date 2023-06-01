@@ -3,32 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/models/kamera.dart';
 import 'package:android_camera_comparison/services/remote_service_kamera.dart';
 
-class DetailScreenBody extends StatefulWidget {
-  final dynamic product;
+class DetailScreenBody extends StatelessWidget {
+  final Kamera product;
   DetailScreenBody({Key? key, required this.product}) : super(key: key);
-
-  @override
-  _DetailScreenBody createState() => _DetailScreenBody();
-}
-
-class _DetailScreenBody extends State<DetailScreenBody> {
-  List<Kamera>? kameras;
-  var isLoaded = false;
-
-  @override
-  void initState() {
-    super.initState();
-    getData();
-  }
-
-  getData() async {
-    kameras = await RemoteServiceKamera().getKameras();
-    if(kameras != null) {
-      setState(() {
-        isLoaded = true;
-      });
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -106,8 +83,8 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                               ),
                               child: FractionallySizedBox(
                                 heightFactor: 0.7, // Set the height factor to 0.5 (50% of available height)
-                                child: Image.asset(
-                                  'assets/img/lensa1.png',
+                                child: Image.network(
+                                  product.gambar,
                                   fit: BoxFit.fitHeight, // Ensu
 
                                   // re the image maintains its aspect ratio
@@ -116,7 +93,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                             ),
                             SizedBox(height: 10),
                             Text(
-                              'Merek Camera',
+                              product.nama_kamera,
                               textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 24, color: Colors.black, fontWeight: FontWeight.bold),
                             ),
@@ -178,7 +155,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.harga",
+                                        product.harga,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -237,7 +214,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.mode_af",
+                                        product.mode_af,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -296,7 +273,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.built_in_flash",
+                                        product.built_in_flash,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -355,7 +332,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.kecepatan_pemotretan",
+                                        product.kecepatan_pemotretan,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -414,7 +391,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.dimensi",
+                                        product.dimensi,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -473,7 +450,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.iso_efektif",
+                                        product.iso_efektif,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -532,7 +509,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.exposure_compensation",
+                                        product.exposure_compensation,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -591,7 +568,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.mode_flash",
+                                        product.mode_flash,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -650,7 +627,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.resolusi_gambar",
+                                        product.resolusi_gambar,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -709,7 +686,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.image_stabilizer",
+                                        product.image_stabilizer,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -768,7 +745,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.monitor_lcd_ukuran",
+                                        product.monitor_lcd_ukuran,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -827,7 +804,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.monitor_lcd_resolusi",
+                                        product.monitor_lcd_resolusi,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -886,7 +863,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.fokus_manual",
+                                        product.fokus_manual,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -945,7 +922,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.mode_pemotretan",
+                                        product.mode_pemotretan,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -1004,7 +981,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.ukuran_sensor",
+                                        product.ukuran_sensor,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -1063,7 +1040,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.rentang_kecepatan_rana",
+                                        product.rentang_kecepatan_rana,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -1122,7 +1099,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.bobot",
+                                        product.bobot,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -1181,7 +1158,7 @@ class _DetailScreenBody extends State<DetailScreenBody> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "kamera.white_balance",
+                                        product.white_balance,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),

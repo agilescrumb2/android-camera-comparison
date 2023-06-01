@@ -96,7 +96,13 @@ class _ListKameraState extends State<ListKamera> {
         ),
       ),
       body: Container(
-        color: Colors.deepPurpleAccent,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(20.0),
+            topLeft: Radius.circular(20.0),
+          ),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -109,6 +115,7 @@ class _ListKameraState extends State<ListKamera> {
                   final kamera = searchResult?[index];
                   if (kamera == null) return null;
                   return Card(
+                    color: Colors.white38,
                     margin: const EdgeInsets.all(6),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
@@ -163,7 +170,7 @@ class _ListKameraState extends State<ListKamera> {
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 21,
-                                      color: Colors.green,
+                                      color: Colors.deepPurple,
                                     ),
                                   ),
                                 ],
@@ -182,6 +189,7 @@ class _ListKameraState extends State<ListKamera> {
                     final kamera = fullkameras?[index];
                     if (kamera == null) return null;
                     return new Card (
+                      color: Colors.white38,
                       margin: const EdgeInsets.all(6),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15),
@@ -236,7 +244,7 @@ class _ListKameraState extends State<ListKamera> {
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 21,
-                                        color: Colors.green,
+                                        color: Colors.deepPurple,
                                       ),
                                     ),
                                   ],

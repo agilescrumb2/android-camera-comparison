@@ -3,32 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:android_camera_comparison/models/lensa.dart';
 import 'package:android_camera_comparison/services/remote_service_lensa.dart';
 
-class DetailScreenLensa extends StatefulWidget {
-
-  DetailScreenLensa({Key? key}) : super(key: key);
-
-  @override
-  _DetailScreenLensa createState() => _DetailScreenLensa();
-}
-
-class _DetailScreenLensa extends State<DetailScreenLensa> {
-  List<Lensa>? lensas;
-  var isLoaded = false;
-
-  @override
-  void initState() {
-    super.initState();
-    getData();
-  }
-
-  getData() async {
-    lensas = await RemoteServiceLensa().getLensas();
-    if (lensas != null) {
-      setState(() {
-        isLoaded = true;
-      });
-    }
-  }
+class DetailScreenLensa extends StatelessWidget {
+  final Lensa product;
+  DetailScreenLensa({Key? key, required this.product}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -106,8 +83,8 @@ class _DetailScreenLensa extends State<DetailScreenLensa> {
                               ),
                               child: FractionallySizedBox(
                                 heightFactor: 0.7, // Set the height factor to 0.5 (50% of available height)
-                                child: Image.asset(
-                                  'assets/img/lensa1.png',
+                                child: Image.network(
+                                  product.gambar,
                                   fit: BoxFit.fitHeight, // Ensu
 
                                   // re the image maintains its aspect ratio
@@ -116,7 +93,7 @@ class _DetailScreenLensa extends State<DetailScreenLensa> {
                             ),
                             SizedBox(height: 10),
                             Text(
-                              'Merek Camera',
+                              product.nama_lensa,
                               textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 24, color: Colors.black, fontWeight: FontWeight.bold),
                             ),
@@ -178,7 +155,7 @@ class _DetailScreenLensa extends State<DetailScreenLensa> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "lensa.harga",
+                                        product.harga,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -296,7 +273,7 @@ class _DetailScreenLensa extends State<DetailScreenLensa> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "lensa.aperture_minimum",
+                                        product.aperture_minimum,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -355,7 +332,7 @@ class _DetailScreenLensa extends State<DetailScreenLensa> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "lensa.ukuran_filter",
+                                        product.ukuran_filter,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -414,7 +391,7 @@ class _DetailScreenLensa extends State<DetailScreenLensa> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "lensa.jarak_pemfokusan_terdekat",
+                                        product.jarak_pemfokusan_terdekat,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -473,7 +450,7 @@ class _DetailScreenLensa extends State<DetailScreenLensa> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "lensa.pembesaran_maks",
+                                        product.pembesaran_maks,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -532,7 +509,7 @@ class _DetailScreenLensa extends State<DetailScreenLensa> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "lensa.jumlah_bilah_diafragma",
+                                        product.jumlah_bilah_diafragma,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),

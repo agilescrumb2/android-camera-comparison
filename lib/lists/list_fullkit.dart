@@ -94,7 +94,13 @@ class _ListFullkitState extends State<ListFullkit> {
         ),
       ),
       body: Container(
-        color: Colors.deepPurpleAccent,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(20.0),
+            topLeft: Radius.circular(20.0),
+          ),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -107,6 +113,7 @@ class _ListFullkitState extends State<ListFullkit> {
                   final fullkit = searchResult?[index];
                   if (fullkit == null) return null;
                   return Card(
+                    color: Colors.white38,
                     margin: const EdgeInsets.all(6),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
@@ -132,7 +139,7 @@ class _ListFullkitState extends State<ListFullkit> {
                               // gradient: LinearGradient(
                               //   begin: Alignment.topLeft,
                               //   end: Alignment.bottomRight,
-                              //   colors: [Colors.blue, Colors.green],
+                              //   colors: [Colors.blue, Colors.deepPurple],
                               // ),
                               borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(15.0),
@@ -166,7 +173,7 @@ class _ListFullkitState extends State<ListFullkit> {
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 21,
-                                      color: Colors.green,
+                                      color: Colors.deepPurple,
                                     ),
                                   ),
                                 ],
@@ -186,6 +193,7 @@ class _ListFullkitState extends State<ListFullkit> {
                   final fullkit = fullkits?[index];
                   if (fullkit == null) return null;
                   return Card(
+                    color: Colors.white38,
                     margin: const EdgeInsets.all(6),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
@@ -211,7 +219,7 @@ class _ListFullkitState extends State<ListFullkit> {
                               // gradient: LinearGradient(
                               //   begin: Alignment.topLeft,
                               //   end: Alignment.bottomRight,
-                              //   colors: [Colors.blue, Colors.green],
+                              //   colors: [Colors.blue, Colors.deepPurple],
                               // ),
                               borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(15.0),
@@ -245,7 +253,7 @@ class _ListFullkitState extends State<ListFullkit> {
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 21,
-                                      color: Colors.green,
+                                      color: Colors.deepPurple,
                                     ),
                                   ),
                                 ],

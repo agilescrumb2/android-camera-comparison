@@ -4,33 +4,9 @@ import '../models/fullkit.dart';
 import 'package:android_camera_comparison/services/remote_service_fullkit.dart';
 
 
-class DetailScreenFullkit extends StatefulWidget {
-  final dynamic product;
-
+class DetailScreenFullkit extends StatelessWidget {
+  final Fullkit product;
   DetailScreenFullkit({Key? key, required this.product}) : super(key: key);
-
-  @override
-  _DetailScreenFullkit createState() => _DetailScreenFullkit();
-}
-
-class _DetailScreenFullkit extends State<DetailScreenFullkit> {
-  List<Fullkit>? fullkits;
-  var isLoaded = false;
-
-  @override
-  void initState() {
-    super.initState();
-    getData();
-  }
-
-  getData() async {
-    fullkits = await RemoteServiceFullkit().getFullkits();
-    if(fullkits != null) {
-      setState(() {
-        isLoaded = true;
-      });
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -108,8 +84,8 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                               ),
                               child: FractionallySizedBox(
                                 heightFactor: 0.7, // Set the height factor to 0.5 (50% of available height)
-                                child: Image.asset(
-                                  'assets/img/lensa1.png',
+                                child: Image.network(
+                                  product.gambar,
                                   fit: BoxFit.fitHeight, // Ensu
 
                                   // re the image maintains its aspect ratio
@@ -118,7 +94,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                             ),
                             SizedBox(height: 10),
                             Text(
-                              'Merek Camera',
+                              product.nama_fulkit,
                               textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 24, color: Colors.black, fontWeight: FontWeight.bold),
                             ),
@@ -180,7 +156,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "fullkit.harga",
+                                        product.harga,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -239,7 +215,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "fullkit.mode_af",
+                                        product.mode_af,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -298,7 +274,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "fullkit.fokus_manual",
+                                        product.fokus_manual,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -357,7 +333,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "fullkit.built_in_flash",
+                                        product.built_in_flash,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -416,7 +392,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "fullkit.mode_flash",
+                                        product.mode_flash,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -475,7 +451,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "fullkit.jarak_fokus_terdekat",
+                                        product.jarak_fokus_terdekat,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -534,7 +510,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "fullkit.kecepatan_pemotretan",
+                                        product.kecepatan_pemotretan,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -593,7 +569,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "fullkit.zoom_digital",
+                                        product.zoom_digital,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -652,7 +628,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "fullkit.resolusi_gambar",
+                                        product.resolusi_gambar,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -711,7 +687,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "fullkit.image_stabilizer",
+                                        product.image_stabilizer,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -770,7 +746,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "fullkit.monitor_lcd_ukuran",
+                                        product.monitor_lcd_ukuran,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -829,7 +805,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "fullkit.monitor_lcd_resolusi",
+                                        product.monitor_lcd_resolusi,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -888,7 +864,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "fullkit.ukuran_sensor",
+                                        product.ukuran_sensor,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -947,7 +923,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "fullkit.white_balance",
+                                        product.white_balance,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -1006,7 +982,7 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
                                     SizedBox(width: 25,),
                                     Expanded(
                                       child: Text(
-                                        "fullkit.rentang_kecepatan_rana",
+                                        product.rentang_kecepatan_rana,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 4,
                                       ),
@@ -1025,6 +1001,5 @@ class _DetailScreenFullkit extends State<DetailScreenFullkit> {
           ),
         )
     );
-
   }
 }
