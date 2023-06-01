@@ -36,11 +36,7 @@ class _KategoriCompareState extends State<KategoriCompare> {
             padding: EdgeInsets.only(right: 20.0),
             icon: Image.asset('assets/img/kamera4.png'),
             onPressed: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => SplashScreen()),
-              );
+              Navigator.pop(context);
             },
           ),
         ],
@@ -113,12 +109,8 @@ class _KategoriCompareState extends State<KategoriCompare> {
                                   child: Center(
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
-                                      children: const <Widget>[
-                                        Icon(
-                                          Icons.camera_alt,
-                                          size: 70,
-                                          color: Colors.black,
-                                        ),
+                                      children: <Widget>[
+                                        Image.asset('assets/img/icon_body.png', width: 80, height: 80),
                                         Text('Body Only',
                                             style: TextStyle(fontSize: 17.0)),
                                       ],
@@ -155,12 +147,8 @@ class _KategoriCompareState extends State<KategoriCompare> {
                                   child: Center(
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
-                                      children: const <Widget>[
-                                        Icon(
-                                          Icons.camera,
-                                          size: 70,
-                                          color: Colors.black,
-                                        ),
+                                      children: <Widget>[
+                                        Image.asset('assets/img/icon_lens.png', width: 80, height: 80),
                                         Text('Lensa',
                                             style: TextStyle(fontSize: 17.0)),
                                       ],
@@ -196,12 +184,8 @@ class _KategoriCompareState extends State<KategoriCompare> {
                             child: Center(
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
-                                children: const <Widget>[
-                                  Icon(
-                                    Icons.camera_enhance,
-                                    size: 70,
-                                    color: Colors.black,
-                                  ),
+                                children: <Widget>[
+                                  Image.asset('assets/img/icon_fullkit.png', width: 80, height: 80),
                                   Text('Full Body',
                                       style: TextStyle(fontSize: 17.0)),
                                 ],

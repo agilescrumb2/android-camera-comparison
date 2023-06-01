@@ -46,11 +46,7 @@ class _ListKameraState extends State<ListKamera> {
             padding: EdgeInsets.only(right: 20.0),
             icon: Image.asset('assets/img/white.png'),
             onPressed: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => HomePage()),
-              );
+              Navigator.pop(context);
             },
           ),
         ],

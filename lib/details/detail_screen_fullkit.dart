@@ -30,11 +30,12 @@ class DetailScreenFullkit extends StatelessWidget {
                 padding: EdgeInsets.only(right: 20.0),
                 icon: Image.asset('assets/img/white.png'),
                 onPressed: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => HomePage()),
-                  );
+                  Navigator.popUntil(context, ModalRoute.withName('/'));
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //       builder: (context) => HomePage()),
+                  // );
                 },
               ),
             ],
