@@ -58,7 +58,16 @@ class DetailScreenBody extends StatelessWidget {
                             bottomLeft: Radius.circular(40),
                           ),
                           color: colorone,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: Offset(0, 3), // changes the position of the shadow
+                            ),
+                          ],
                         ),
+
                       ),
                       Align(
                         alignment: Alignment.bottomCenter,
@@ -92,10 +101,14 @@ class DetailScreenBody extends StatelessWidget {
                               ),
                             ),
                             SizedBox(height: 10),
-                            Text(
-                              product.nama_kamera,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 24, color: Colors.black, fontWeight: FontWeight.bold),
+                            Expanded(
+                              child: Text(
+                                product.nama_kamera,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 2,
+                                textAlign: TextAlign.center,
+                                style: TextStyle(fontSize: 24, color: Colors.black, fontWeight: FontWeight.bold),
+                              ),
                             ),
                           ],
                         ),
