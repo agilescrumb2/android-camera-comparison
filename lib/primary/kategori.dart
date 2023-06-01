@@ -47,6 +47,17 @@ class _KategoriCompareState extends State<KategoriCompare> {
       ),
       body: Stack(
         children: [
+          Opacity(
+            opacity: 0.3,
+            child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/img/pagecc1.png'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
           Container(
             width: size.width,
             height: size.height,
