@@ -7,6 +7,7 @@ import 'package:android_camera_comparison/comparisons/compare_item.dart';
 import 'package:android_camera_comparison/details/detail_screen_fullkit.dart';
 import 'package:android_camera_comparison/primary/kategori.dart';
 import 'package:android_camera_comparison/primary/splash_screen.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -17,6 +18,14 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   // TextEditingController searchController = TextEditingController();
+  //fitur our website tak command
+  // final Uri _url = Uri.parse('https://cameris.my.id');
+  //
+  // Future<void> _launchUrl() async {
+  //   if (!await launchUrl(_url)) {
+  //     throw Exception('Could not launch $_url');
+  //   }
+  // }
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -34,15 +43,15 @@ class _HomePageState extends State<HomePage> {
         // ),
         actions: [
           IconButton(
-              padding: EdgeInsets.only(right: 20.0),
-              icon: Image.asset('assets/img/white.png'),
-              onPressed: (){
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => HomePage()),
-                );
-              },
+            padding: EdgeInsets.only(right: 20.0),
+            icon: Image.asset('assets/img/white.png'),
+            onPressed: (){
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => HomePage()),
+              );
+            },
           ),
         ],
       ),
@@ -68,8 +77,8 @@ class _HomePageState extends State<HomePage> {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/img/beranda_atas.png'),
-                fit: BoxFit.cover
+                  image: AssetImage('assets/img/beranda_atas.png'),
+                  fit: BoxFit.cover
               ),
             ),
             width: double.infinity,
@@ -251,6 +260,21 @@ class _HomePageState extends State<HomePage> {
           //     ],
           //   ),
           // ),
+
+          // Fitur our website disini, tampilannya di bawah
+          // Align(
+          //   alignment: Alignment.bottomCenter,
+          //   child: Padding(
+          //     padding: EdgeInsets.only(bottom: 20),
+          //     child: ElevatedButton(
+          //       onPressed: _launchUrl,
+          //       child: Text('Our Website'),
+          //       style: ElevatedButton.styleFrom(
+          //         primary: Colors.deepPurple, // Mengatur warna latar belakang tombol
+          //       ),
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );
@@ -376,9 +400,9 @@ class ExpandedCard2 extends StatelessWidget {
                       Text(
                         "Lensa",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 24,
-                            color: Colors.deepPurpleAccent,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 24,
+                          color: Colors.deepPurpleAccent,
                         ),
                       ),
                       SizedBox(height: 8),
@@ -448,9 +472,9 @@ class ExpandedCard3 extends StatelessWidget {
                       Text(
                         "Fullkit",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 24,
-                            color: Colors.deepPurpleAccent,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 24,
+                          color: Colors.deepPurpleAccent,
                         ),
                       ),
                       SizedBox(height: 8),
@@ -520,9 +544,9 @@ class ExpandedCard4 extends StatelessWidget {
                       Text(
                         "Compare",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 24,
-                            color: Colors.deepPurpleAccent,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 24,
+                          color: Colors.deepPurpleAccent,
                         ),
                       ),
                       SizedBox(height: 8),
