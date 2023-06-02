@@ -100,7 +100,7 @@ class _ListFullkitState extends State<ListFullkit> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Expanded(
+            Expanded  (
               child: searchResult.length != 0 || controller.text.isNotEmpty ? ListView.builder(
                 physics: BouncingScrollPhysics(),
                 itemCount: searchResult?.length ?? 0,
