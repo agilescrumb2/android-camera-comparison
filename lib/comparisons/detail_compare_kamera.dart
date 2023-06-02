@@ -184,6 +184,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.mode_af,
@@ -218,6 +219,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.mode_af,
@@ -260,6 +262,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.built_in_flash,
@@ -294,6 +297,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.built_in_flash,
@@ -336,6 +340,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.dimensi,
@@ -370,6 +375,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.dimensi,
@@ -412,6 +418,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.kecepatan_pemotretan,
@@ -446,6 +453,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.kecepatan_pemotretan,
@@ -488,6 +496,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.iso_efektif,
@@ -522,6 +531,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.iso_efektif,
@@ -564,6 +574,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.exposure_compensation,
@@ -598,6 +609,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.exposure_compensation,
@@ -640,6 +652,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.mode_flash,
@@ -674,6 +687,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.mode_flash,
@@ -716,6 +730,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.resolusi_gambar,
@@ -750,6 +765,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.resolusi_gambar,
@@ -792,6 +808,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.image_stabilizer,
@@ -826,6 +843,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.image_stabilizer,
@@ -868,6 +886,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.monitor_lcd_ukuran,
@@ -902,6 +921,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.monitor_lcd_ukuran,
@@ -944,6 +964,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.monitor_lcd_resolusi,
@@ -978,6 +999,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.monitor_lcd_resolusi,
@@ -1020,6 +1042,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.fokus_manual,
@@ -1054,6 +1077,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.fokus_manual,
@@ -1096,6 +1120,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.mode_pemotretan,
@@ -1130,6 +1155,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.mode_pemotretan,
@@ -1172,6 +1198,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.ukuran_sensor,
@@ -1206,6 +1233,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.ukuran_sensor,
@@ -1248,6 +1276,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.rentang_kecepatan_rana,
@@ -1282,6 +1311,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.rentang_kecepatan_rana,
@@ -1324,6 +1354,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.bobot,
@@ -1358,6 +1389,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.bobot,
@@ -1400,6 +1432,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.white_balance,
@@ -1434,6 +1467,7 @@ class DetailCompareKamera extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.white_balance,

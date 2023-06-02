@@ -184,6 +184,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.mode_af,
@@ -218,6 +219,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.mode_af,
@@ -260,6 +262,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.fokus_manual,
@@ -294,6 +297,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.fokus_manual,
@@ -336,6 +340,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.built_in_flash,
@@ -370,6 +375,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.built_in_flash,
@@ -412,6 +418,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.mode_flash,
@@ -446,6 +453,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.mode_flash,
@@ -488,6 +496,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.panjang_fokus,
@@ -522,6 +531,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.panjang_fokus,
@@ -564,6 +574,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.kecepatan_pemotretan,
@@ -598,6 +609,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.kecepatan_pemotretan,
@@ -640,6 +652,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.zoom_digital,
@@ -674,6 +687,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.zoom_digital,
@@ -716,6 +730,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.iso_efektif,
@@ -750,6 +765,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.iso_efektif,
@@ -792,6 +808,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.resolusi_gambar,
@@ -826,6 +843,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.resolusi_gambar,
@@ -868,6 +886,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.image_stabilizer,
@@ -902,6 +921,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.image_stabilizer,
@@ -944,6 +964,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.monitor_lcd_ukuran,
@@ -978,6 +999,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.monitor_lcd_ukuran,
@@ -1020,6 +1042,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.monitor_lcd_resolusi,
@@ -1054,6 +1077,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.monitor_lcd_resolusi,
@@ -1096,6 +1120,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.ukuran_sensor,
@@ -1130,6 +1155,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.ukuran_sensor,
@@ -1172,6 +1198,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.white_balance,
@@ -1206,6 +1233,7 @@ class DetailCompareFullkit extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.white_balance,

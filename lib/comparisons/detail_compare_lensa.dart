@@ -184,6 +184,7 @@ class DetailCompareLensa extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.bobot,
@@ -218,6 +219,7 @@ class DetailCompareLensa extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.bobot,
@@ -260,6 +262,7 @@ class DetailCompareLensa extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.diameter_panjang,
@@ -294,6 +297,7 @@ class DetailCompareLensa extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.diameter_panjang,
@@ -336,6 +340,7 @@ class DetailCompareLensa extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.aperture_minimum,
@@ -370,6 +375,7 @@ class DetailCompareLensa extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.aperture_minimum,
@@ -412,6 +418,7 @@ class DetailCompareLensa extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.ukuran_filter,
@@ -446,6 +453,7 @@ class DetailCompareLensa extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.ukuran_filter,
@@ -488,6 +496,7 @@ class DetailCompareLensa extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.jarak_pemfokusan_terdekat,
@@ -522,6 +531,7 @@ class DetailCompareLensa extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.jarak_pemfokusan_terdekat,
@@ -564,6 +574,7 @@ class DetailCompareLensa extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.pembesaran_maks,
@@ -598,6 +609,7 @@ class DetailCompareLensa extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.pembesaran_maks,
@@ -640,6 +652,7 @@ class DetailCompareLensa extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item1.jumlah_bilah_diafragma,
@@ -674,6 +687,7 @@ class DetailCompareLensa extends StatelessWidget{
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 25,),
                                     Expanded(
                                         child: Text(
                                           item2.jumlah_bilah_diafragma,
