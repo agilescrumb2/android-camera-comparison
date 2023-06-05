@@ -48,6 +48,7 @@ class _ListKameraCompareState extends State<ListKameraCompare> {
             icon: Image.asset('assets/img/white.png'),
             onPressed: (){
               Navigator.pop(context);
+              Navigator.pop(context);
             },
           ),
         ],

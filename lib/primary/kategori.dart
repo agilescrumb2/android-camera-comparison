@@ -34,7 +34,7 @@ class _KategoriCompareState extends State<KategoriCompare> {
         actions: [
           IconButton(
             padding: EdgeInsets.only(right: 20.0),
-            icon: Image.asset('assets/img/kamera4.png'),
+            icon: Image.asset('assets/img/white.png'),
             onPressed: (){
               Navigator.pop(context);
             },
@@ -44,7 +44,7 @@ class _KategoriCompareState extends State<KategoriCompare> {
       body: Stack(
         children: [
           Opacity(
-            opacity: 0.3,
+            opacity: 0.8,
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -53,20 +53,6 @@ class _KategoriCompareState extends State<KategoriCompare> {
                 ),
               ),
             ),
-          ),
-          Container(
-            width: size.width,
-            height: size.height,
-            child: Text(
-              'Anda dapat melakukan perbandingan dengan memilih salah satu dari kategori di bawah ini.',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 22.0,
-                color: Colors.black,
-              ),
-            ),
-            padding: EdgeInsets.only(top: 350.0),
           ),
           Container(
             width: size.width,
@@ -80,92 +66,9 @@ class _KategoriCompareState extends State<KategoriCompare> {
                 Expanded(
                   child: Column(
                     children: <Widget>[
-                      Row(
-
-                        children: [
-                          Expanded(
-                            flex: 1,
-                            child :Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(30.0),
-                                  bottomLeft: Radius.circular(30.0),
-                                ),
-                              ),
-                              color: Colors.deepPurpleAccent,
-                              elevation: 20,
-                              margin: const EdgeInsets.all(8),
-                              child: Padding(
-                                padding: const EdgeInsets.all(16.0),
-                                child: InkWell(
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => ListKameraCompare()),
-                                    );
-                                  },
-                                  splashColor: Colors.blueAccent,
-                                  child: Center(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: <Widget>[
-                                        Image.asset('assets/img/icon_body.png', width: 80, height: 80),
-                                        Text('Body Only',
-                                            style: TextStyle(fontSize: 17.0)),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-
-                          ),
-                          Expanded(
-                            flex: 1,
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(40.0),
-                                  bottomRight: Radius.circular(40.0),
-                                ),
-                              ),
-                              color: Colors.blueAccent,
-                              elevation: 20,
-                              margin: const EdgeInsets.all(8),
-                              child: Padding(
-                                padding: const EdgeInsets.all(16.0),
-                                child: InkWell(
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => ListLensaCompare()),
-                                    );
-                                  },
-                                  splashColor: Colors.blueAccent,
-                                  child: Center(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: <Widget>[
-                                        Image.asset('assets/img/icon_lens.png', width: 80, height: 80),
-                                        Text('Lensa',
-                                            style: TextStyle(fontSize: 17.0)),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
                       Card(
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(40.0),
-                            bottomRight: Radius.circular(40.0),
-                          ),
+                          borderRadius: BorderRadius.all(Radius.circular(40))
                         ),
                         color: Colors.indigoAccent,
                         elevation: 20,
@@ -184,8 +87,12 @@ class _KategoriCompareState extends State<KategoriCompare> {
                             child: Center(
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  Image.asset('assets/img/icon_fullkit.png', width: 80, height: 80),
+                                children: const <Widget>[
+                                  Icon(
+                                    Icons.camera_enhance,
+                                    size: 70,
+                                    color: Colors.black,
+                                  ),
                                   Text('Full Body',
                                       style: TextStyle(fontSize: 17.0)),
                                 ],
@@ -193,6 +100,87 @@ class _KategoriCompareState extends State<KategoriCompare> {
                             ),
                           ),
                         ),
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child :Card(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(40))
+                              ),
+                              color: Colors.indigoAccent,
+                              elevation: 20,
+                              margin: const EdgeInsets.all(8),
+                              child: Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => ListKameraCompare()),
+                                    );
+                                  },
+                                  splashColor: Colors.blueAccent,
+                                  child: Center(
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: const <Widget>[
+                                        Icon(
+                                          Icons.camera_alt,
+                                          size: 70,
+                                          color: Colors.black,
+                                        ),
+                                        Text('Body Only',
+                                            style: TextStyle(fontSize: 17.0)),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+
+                          ),
+                          Expanded(
+                            flex: 1,
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(40))
+                              ),
+                              color: Colors.indigoAccent,
+                              elevation: 20,
+                              margin: const EdgeInsets.all(8),
+                              child: Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => ListLensaCompare()),
+                                    );
+                                  },
+                                  splashColor: Colors.blueAccent,
+                                  child: Center(
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: const <Widget>[
+                                        Icon(
+                                          Icons.camera,
+                                          size: 70,
+                                          color: Colors.black,
+                                        ),
+                                        Text('Lensa',
+                                            style: TextStyle(fontSize: 17.0)),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),

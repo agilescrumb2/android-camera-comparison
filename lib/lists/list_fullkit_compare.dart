@@ -46,6 +46,7 @@ class _ListFullkitCompareState extends State<ListFullkitCompare> {
             icon: Image.asset('assets/img/white.png'),
             onPressed: (){
               Navigator.pop(context);
+              Navigator.pop(context);
             },
           ),
         ],

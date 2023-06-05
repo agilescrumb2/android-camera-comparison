@@ -47,6 +47,7 @@ class _ListLensaCompareState extends State<ListLensaCompare> {
             icon: Image.asset('assets/img/white.png'),
             onPressed: (){
               Navigator.pop(context);
+              Navigator.pop(context);
             },
           ),
         ],
